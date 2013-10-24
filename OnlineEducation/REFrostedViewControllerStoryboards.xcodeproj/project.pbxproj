@@ -30,6 +30,7 @@
 		F5F77C6E1817B94F00B7CA73 /* UIImage+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C661817B94F00B7CA73 /* UIImage+REFrostedViewController.m */; };
 		F5F77C6F1817B94F00B7CA73 /* UIView+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C681817B94F00B7CA73 /* UIView+REFrostedViewController.m */; };
 		F5F77C701817B94F00B7CA73 /* UIViewController+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C6A1817B94F00B7CA73 /* UIViewController+REFrostedViewController.m */; };
+		F5F77C741818EB4E00B7CA73 /* NVUIGradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C731818EB4E00B7CA73 /* NVUIGradientButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		F5F77C681817B94F00B7CA73 /* UIView+REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+REFrostedViewController.m"; sourceTree = "<group>"; };
 		F5F77C691817B94F00B7CA73 /* UIViewController+REFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+REFrostedViewController.h"; sourceTree = "<group>"; };
 		F5F77C6A1817B94F00B7CA73 /* UIViewController+REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+REFrostedViewController.m"; sourceTree = "<group>"; };
+		F5F77C721818EB4E00B7CA73 /* NVUIGradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVUIGradientButton.h; sourceTree = "<group>"; };
+		F5F77C731818EB4E00B7CA73 /* NVUIGradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVUIGradientButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,7 @@
 		3032B8861805A10100064F85 = {
 			isa = PBXGroup;
 			children = (
+				F5F77C711818EB4E00B7CA73 /* NVUIGradientButton */,
 				F5F77C5E1817B94F00B7CA73 /* REFrostedViewController */,
 				3032B8981805A10100064F85 /* REFrostedViewControllerStoryboards */,
 				3032B8911805A10100064F85 /* Frameworks */,
@@ -195,6 +199,15 @@
 				F5F77C6A1817B94F00B7CA73 /* UIViewController+REFrostedViewController.m */,
 			);
 			path = REFrostedViewController;
+			sourceTree = "<group>";
+		};
+		F5F77C711818EB4E00B7CA73 /* NVUIGradientButton */ = {
+			isa = PBXGroup;
+			children = (
+				F5F77C721818EB4E00B7CA73 /* NVUIGradientButton.h */,
+				F5F77C731818EB4E00B7CA73 /* NVUIGradientButton.m */,
+			);
+			path = NVUIGradientButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3032B8CE1805A1BC00064F85 /* DEMOHomeViewController.m in Sources */,
+				F5F77C741818EB4E00B7CA73 /* NVUIGradientButton.m in Sources */,
 				F5F77C6C1817B94F00B7CA73 /* REFrostedContainerViewController.m in Sources */,
 				3032B89F1805A10100064F85 /* main.m in Sources */,
 				3032B8A91805A10100064F85 /* DEMORootViewController.m in Sources */,
