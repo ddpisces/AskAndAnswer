@@ -31,6 +31,7 @@
 		F5F77C6F1817B94F00B7CA73 /* UIView+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C681817B94F00B7CA73 /* UIView+REFrostedViewController.m */; };
 		F5F77C701817B94F00B7CA73 /* UIViewController+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C6A1817B94F00B7CA73 /* UIViewController+REFrostedViewController.m */; };
 		F5F77C741818EB4E00B7CA73 /* NVUIGradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C731818EB4E00B7CA73 /* NVUIGradientButton.m */; };
+		F5F77C7A1818FA8700B7CA73 /* OACourseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C791818FA8700B7CA73 /* OACourseListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		F5F77C6A1817B94F00B7CA73 /* UIViewController+REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+REFrostedViewController.m"; sourceTree = "<group>"; };
 		F5F77C721818EB4E00B7CA73 /* NVUIGradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVUIGradientButton.h; sourceTree = "<group>"; };
 		F5F77C731818EB4E00B7CA73 /* NVUIGradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVUIGradientButton.m; sourceTree = "<group>"; };
+		F5F77C781818FA8700B7CA73 /* OACourseListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OACourseListViewController.h; sourceTree = "<group>"; };
+		F5F77C791818FA8700B7CA73 /* OACourseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OACourseListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +181,8 @@
 				3032B8E61805A26500064F85 /* DEMONavigationController.m */,
 				3032B8E81805A4BF00064F85 /* DEMOSecondViewController.h */,
 				3032B8E91805A4BF00064F85 /* DEMOSecondViewController.m */,
+				F5F77C781818FA8700B7CA73 /* OACourseListViewController.h */,
+				F5F77C791818FA8700B7CA73 /* OACourseListViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 				F5F77C6C1817B94F00B7CA73 /* REFrostedContainerViewController.m in Sources */,
 				3032B89F1805A10100064F85 /* main.m in Sources */,
 				3032B8A91805A10100064F85 /* DEMORootViewController.m in Sources */,
+				F5F77C7A1818FA8700B7CA73 /* OACourseListViewController.m in Sources */,
 				3032B8EA1805A4BF00064F85 /* DEMOSecondViewController.m in Sources */,
 				F5F77C701817B94F00B7CA73 /* UIViewController+REFrostedViewController.m in Sources */,
 				F5F77C6E1817B94F00B7CA73 /* UIImage+REFrostedViewController.m in Sources */,
