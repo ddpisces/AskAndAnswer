@@ -8,6 +8,11 @@
 
 #import "OAFillQuestionViewController.h"
 
+typedef enum {
+    GRADE,
+    COURSE
+}CategorySelection;
+
 @interface OAFillQuestionViewController ()
 
 @end
@@ -15,6 +20,7 @@
 @implementation OAFillQuestionViewController{
     NSArray     *courses;
     NSArray     *grades;
+    CategorySelection studentSelection;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -55,38 +61,46 @@
 }
 
 #pragma mark -
-#pragma mark dataSouce
+#pragma mark delegate Methods
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return  2;
-}
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    
-    if (component == 0) {
-        return [grades count];
+- (void)itemSelectedatRow:(NSInteger)row{
+    if (studentSelection == GRADE) {
+        [self.btGrade setTitle:[grades objectAtIndex:row] forState:UIControlStateNormal];
     }
-    else{
-        return [courses count];
+    else
+    {
+        [self.btCourse setTitle:[courses objectAtIndex:row] forState:UIControlStateNormal];
     }
 }
 
 #pragma mark -
-#pragma mark delegate Methods
-
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+#pragma mark IBAction Category Selection
+- (IBAction)clickGrade:(id)sender {
     
-    if (component == 0) {
-        return [grades objectAtIndex:row];
-    }
-    else {
-        return [courses objectAtIndex:row];
-    }
+    // mark user select grade
+    studentSelection = GRADE;
+    
+    // show grade list
+    UINavigationController *navigationController = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"CatogerySelection"];
+    KMCSimpleTableViewController *tableViewController = (KMCSimpleTableViewController *)[[navigationController viewControllers] objectAtIndex:0];
+    tableViewController.tableData = grades;
+    tableViewController.navigationItem.title = @"请选择年级";
+    tableViewController.delegate = self;
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+- (IBAction)clickCourse:(id)sender {
     
+    // mark user select course
+    studentSelection = COURSE;
     
+    // show course list
+    UINavigationController *navigationController = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"CatogerySelection"];
+    KMCSimpleTableViewController *tableViewController = (KMCSimpleTableViewController *)[[navigationController viewControllers] objectAtIndex:0];
+    tableViewController.tableData = courses;
+    tableViewController.navigationItem.title = @"请选择科目";
+    tableViewController.delegate = self;
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 @end

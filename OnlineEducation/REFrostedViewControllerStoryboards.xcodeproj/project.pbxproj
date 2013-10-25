@@ -33,6 +33,7 @@
 		F5F77C741818EB4E00B7CA73 /* NVUIGradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C731818EB4E00B7CA73 /* NVUIGradientButton.m */; };
 		F5F77C7A1818FA8700B7CA73 /* OACourseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C791818FA8700B7CA73 /* OACourseListViewController.m */; };
 		F5F77C7D18190DA600B7CA73 /* OAFillQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C7C18190DA600B7CA73 /* OAFillQuestionViewController.m */; };
+		F5F77C80181A4C5100B7CA73 /* KMCSimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C7F181A4C5100B7CA73 /* KMCSimpleTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,8 @@
 		F5F77C791818FA8700B7CA73 /* OACourseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OACourseListViewController.m; sourceTree = "<group>"; };
 		F5F77C7B18190DA600B7CA73 /* OAFillQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAFillQuestionViewController.h; sourceTree = "<group>"; };
 		F5F77C7C18190DA600B7CA73 /* OAFillQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAFillQuestionViewController.m; sourceTree = "<group>"; };
+		F5F77C7E181A4C5100B7CA73 /* KMCSimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMCSimpleTableViewController.h; sourceTree = "<group>"; };
+		F5F77C7F181A4C5100B7CA73 /* KMCSimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMCSimpleTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +181,8 @@
 				3032B8A81805A10100064F85 /* DEMORootViewController.m */,
 				3032B8CC1805A1BC00064F85 /* DEMOHomeViewController.h */,
 				3032B8CD1805A1BC00064F85 /* DEMOHomeViewController.m */,
+				F5F77C7E181A4C5100B7CA73 /* KMCSimpleTableViewController.h */,
+				F5F77C7F181A4C5100B7CA73 /* KMCSimpleTableViewController.m */,
 				3032B8CF1805A1D200064F85 /* DEMOMenuViewController.h */,
 				3032B8D01805A1D200064F85 /* DEMOMenuViewController.m */,
 				3032B8E51805A26500064F85 /* DEMONavigationController.h */,
@@ -331,6 +336,7 @@
 				3032B8D11805A1D200064F85 /* DEMOMenuViewController.m in Sources */,
 				3032B8A31805A10100064F85 /* DEMOAppDelegate.m in Sources */,
 				F5F77C6F1817B94F00B7CA73 /* UIView+REFrostedViewController.m in Sources */,
+				F5F77C80181A4C5100B7CA73 /* KMCSimpleTableViewController.m in Sources */,
 				3032B8E71805A26500064F85 /* DEMONavigationController.m in Sources */,
 				F5F77C6B1817B94F00B7CA73 /* RECommonFunctions.m in Sources */,
 				F5F77C6D1817B94F00B7CA73 /* REFrostedViewController.m in Sources */,

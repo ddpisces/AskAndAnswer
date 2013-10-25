@@ -91,7 +91,7 @@
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="MkI-tA-lvq" kind="push" id="Rho-gm-8Z3"/>
+                                    <segue destination="MkI-tA-lvq" kind="push" id="lPj-dY-vpL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIr-AW-tv0">
@@ -189,6 +189,46 @@
             </objects>
             <point key="canvasLocation" x="2031" y="298"/>
         </scene>
+        <!--Simple Table View Controller - Root View Controller-->
+        <scene sceneID="Lru-8E-R0i">
+            <objects>
+                <tableViewController id="xK9-eg-qj8" customClass="KMCSimpleTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="msy-oh-KGH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Shp-K6-DoH">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Shp-K6-DoH" id="Fth-kO-Pnq">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="769-kg-8CW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EJT-7d-Tcy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3106" y="298"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zoU-1l-19d">
+            <objects>
+                <navigationController storyboardIdentifier="CatogerySelection" definesPresentationContext="YES" id="kfR-Ks-UmI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qV9-xc-mK6">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xK9-eg-qj8" kind="relationship" relationship="rootViewController" id="9tI-IK-YPl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q4V-cv-biJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2572" y="298"/>
+        </scene>
         <!--Menu View Controller-->
         <scene sceneID="QYK-Xf-W03">
             <objects>
@@ -266,13 +306,28 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWO-rV-JoO">
-                                <rect key="frame" x="40" y="240" width="240" height="38"/>
+                                <rect key="frame" x="40" y="240" width="109" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="选择问题分类" backgroundImage="btn_select_category_c">
+                                <state key="normal" title="年级" backgroundImage="btn_select_category_c">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="clickGrade:" destination="MkI-tA-lvq" eventType="touchUpInside" id="4VD-CG-9WE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFo-2F-yV2">
+                                <rect key="frame" x="167" y="240" width="113" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="科目" backgroundImage="btn_select_category_c">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickCourse:" destination="MkI-tA-lvq" eventType="touchUpInside" id="eLj-Vf-ewN"/>
+                                </connections>
                             </button>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btn_photo_c" translatesAutoresizingMaskIntoConstraints="NO" id="LfS-u3-g0T">
                                 <rect key="frame" x="95" y="303" width="131" height="117"/>
@@ -286,27 +341,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f1u-YD-exl">
-                                <rect key="frame" x="0.0" y="286" width="320" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="MkI-tA-lvq" id="piz-3o-bdT"/>
-                                    <outlet property="delegate" destination="MkI-tA-lvq" id="X3x-7W-nG5"/>
-                                </connections>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="tk2-HF-VPT"/>
                     <connections>
+                        <outlet property="btGrade" destination="QWO-rV-JoO" id="6i1-Nk-4mc"/>
                         <outlet property="btRaiseQuestion" destination="djE-54-ySt" id="Ntn-SZ-olX"/>
-                        <outlet property="pickerView" destination="f1u-YD-exl" id="MYK-Ow-TkU"/>
                         <outlet property="questionFeild" destination="ybp-EL-E4h" id="M1X-FV-JWW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JpT-fn-C6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2025" y="989"/>
+            <point key="canvasLocation" x="2031" y="989"/>
         </scene>
     </scenes>
     <resources>
@@ -314,6 +361,7 @@
         <image name="bg_body" width="480" height="800"/>
         <image name="bg_body" width="480" height="800"/>
         <image name="btn_photo_c" width="234" height="234"/>
+        <image name="btn_select_category_c" width="458" height="57"/>
         <image name="btn_select_category_c" width="458" height="57"/>
         <image name="teacher" width="90" height="90"/>
         <image name="text_bg2" width="255" height="231"/>

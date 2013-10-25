@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "NVUIGradientButton.h"
+#import "KMCSimpleTableViewController.h"
 
-@interface OAFillQuestionViewController : UIViewController<UIPickerViewDataSource,UIPickerViewDelegate>
+@interface OAFillQuestionViewController : UIViewController<KMCSimpleTableViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextView *questionFeild;
 @property (strong, nonatomic) IBOutlet NVUIGradientButton *btRaiseQuestion;
-@property (strong, nonatomic) IBOutlet UIPickerView *pickerView;
+@property (weak, nonatomic) IBOutlet UIButton *btGrade;
+@property (weak, nonatomic) IBOutlet UIButton *btCourse;
+
+- (IBAction)clickGrade:(id)sender;
+- (IBAction)clickCourse:(id)sender;
 
 @end
