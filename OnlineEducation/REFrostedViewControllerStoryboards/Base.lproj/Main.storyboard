@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -346,6 +346,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="tk2-HF-VPT"/>
                     <connections>
+                        <outlet property="btCourse" destination="hFo-2F-yV2" id="eNs-vw-Z4W"/>
                         <outlet property="btGrade" destination="QWO-rV-JoO" id="6i1-Nk-4mc"/>
                         <outlet property="btRaiseQuestion" destination="djE-54-ySt" id="Ntn-SZ-olX"/>
                         <outlet property="questionFeild" destination="ybp-EL-E4h" id="M1X-FV-JWW"/>
@@ -358,15 +359,9 @@
     </scenes>
     <resources>
         <image name="bg_body" width="480" height="800"/>
-        <image name="bg_body" width="480" height="800"/>
-        <image name="bg_body" width="480" height="800"/>
         <image name="btn_photo_c" width="234" height="234"/>
         <image name="btn_select_category_c" width="458" height="57"/>
-        <image name="btn_select_category_c" width="458" height="57"/>
         <image name="teacher" width="90" height="90"/>
-        <image name="text_bg2" width="255" height="231"/>
-        <image name="text_bg2" width="255" height="231"/>
-        <image name="text_bg2" width="255" height="231"/>
         <image name="text_bg2" width="255" height="231"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
