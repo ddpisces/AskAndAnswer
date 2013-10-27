@@ -30,7 +30,7 @@
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 184.0f)];
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 40, 100, 100)];
         imageView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
-        imageView.image = [UIImage imageNamed:@"avatar.jpg"];
+        imageView.image = [UIImage imageNamed:@"student_head.png"];
         imageView.layer.masksToBounds = YES;
         imageView.layer.cornerRadius = 50.0;
         imageView.layer.borderColor = [UIColor whiteColor].CGColor;
@@ -72,7 +72,7 @@
     view.backgroundColor = [UIColor colorWithRed:167/255.0f green:167/255.0f blue:167/255.0f alpha:0.6f];
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 8, 0, 0)];
-    label.text = @"Friends Online";
+    label.text = @"科目分类";
     label.font = [UIFont systemFontOfSize:15];
     label.textColor = [UIColor whiteColor];
     label.backgroundColor = [UIColor clearColor];
@@ -122,9 +122,10 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
     if (sectionIndex == 0) {
-        return 3;
+        return 2;
     }
-    return 7;
+    
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -138,10 +139,10 @@
     }
     
     if (indexPath.section == 0) {
-        NSArray *titles = @[@"Home", @"Profile", @"Chats"];
+        NSArray *titles = @[@"Home", @"Profile"];
         cell.textLabel.text = titles[indexPath.row];
     } else {
-        NSArray *titles = @[@"John Appleseed", @"John Doe", @"Test User", @"user 2", @"user 3", @"user 4", @"user 5"];
+        NSArray *titles = @[@"语文", @"数学", @"英语", @"物理", @"化学", @"历史"];
         cell.textLabel.text = titles[indexPath.row];
     }
     
