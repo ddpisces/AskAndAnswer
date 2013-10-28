@@ -385,20 +385,20 @@
         <scene sceneID="JGW-2b-Qja">
             <objects>
                 <tableViewController id="k43-fx-Ptb" customClass="OAQuestionBreifListViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" sectionHeaderHeight="22" sectionFooterHeight="22" id="s5t-2h-RBG">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="22" sectionFooterHeight="22" id="s5t-2h-RBG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OAQuestion" rowHeight="83" id="G5O-eL-wm5">
-                                <rect key="frame" x="0.0" y="86" width="320" height="83"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OAQuestion" rowHeight="73" id="G5O-eL-wm5">
+                                <rect key="frame" x="0.0" y="86" width="320" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G5O-eL-wm5" id="9OP-M8-zR9">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="content_bg_click" translatesAutoresizingMaskIntoConstraints="NO" id="ljh-T3-Men">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="content_bg" translatesAutoresizingMaskIntoConstraints="NO" id="ljh-T3-Men">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                     </subviews>
@@ -419,10 +419,16 @@
     </scenes>
     <resources>
         <image name="bg_body" width="480" height="800"/>
+        <image name="bg_body" width="480" height="800"/>
+        <image name="bg_body" width="480" height="800"/>
         <image name="btn_photo_c" width="234" height="234"/>
         <image name="btn_select_category_c" width="458" height="57"/>
-        <image name="content_bg_click" width="320" height="66"/>
+        <image name="btn_select_category_c" width="458" height="57"/>
+        <image name="content_bg" width="320" height="65"/>
         <image name="teacher" width="90" height="90"/>
+        <image name="text_bg2" width="255" height="231"/>
+        <image name="text_bg2" width="255" height="231"/>
+        <image name="text_bg2" width="255" height="231"/>
         <image name="text_bg2" width="255" height="231"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
