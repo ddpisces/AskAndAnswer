@@ -34,6 +34,7 @@
 		F5F77C7A1818FA8700B7CA73 /* OACourseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C791818FA8700B7CA73 /* OACourseListViewController.m */; };
 		F5F77C7D18190DA600B7CA73 /* OAFillQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C7C18190DA600B7CA73 /* OAFillQuestionViewController.m */; };
 		F5F77C80181A4C5100B7CA73 /* KMCSimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C7F181A4C5100B7CA73 /* KMCSimpleTableViewController.m */; };
+		F5F77C85181E686E00B7CA73 /* OAQuestionBreifListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C84181E686E00B7CA73 /* OAQuestionBreifListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		F5F77C7C18190DA600B7CA73 /* OAFillQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAFillQuestionViewController.m; sourceTree = "<group>"; };
 		F5F77C7E181A4C5100B7CA73 /* KMCSimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMCSimpleTableViewController.h; sourceTree = "<group>"; };
 		F5F77C7F181A4C5100B7CA73 /* KMCSimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMCSimpleTableViewController.m; sourceTree = "<group>"; };
+		F5F77C83181E686E00B7CA73 /* OAQuestionBreifListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAQuestionBreifListViewController.h; sourceTree = "<group>"; };
+		F5F77C84181E686E00B7CA73 /* OAQuestionBreifListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAQuestionBreifListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +189,8 @@
 				3032B8CF1805A1D200064F85 /* DEMOMenuViewController.h */,
 				3032B8D01805A1D200064F85 /* DEMOMenuViewController.m */,
 				3032B8E51805A26500064F85 /* DEMONavigationController.h */,
+				F5F77C83181E686E00B7CA73 /* OAQuestionBreifListViewController.h */,
+				F5F77C84181E686E00B7CA73 /* OAQuestionBreifListViewController.m */,
 				3032B8E61805A26500064F85 /* DEMONavigationController.m */,
 				3032B8E81805A4BF00064F85 /* DEMOSecondViewController.h */,
 				3032B8E91805A4BF00064F85 /* DEMOSecondViewController.m */,
@@ -340,6 +345,7 @@
 				3032B8E71805A26500064F85 /* DEMONavigationController.m in Sources */,
 				F5F77C6B1817B94F00B7CA73 /* RECommonFunctions.m in Sources */,
 				F5F77C6D1817B94F00B7CA73 /* REFrostedViewController.m in Sources */,
+				F5F77C85181E686E00B7CA73 /* OAQuestionBreifListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
