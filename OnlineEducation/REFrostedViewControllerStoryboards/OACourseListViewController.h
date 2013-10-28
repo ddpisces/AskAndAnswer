@@ -11,11 +11,5 @@
 
 @interface OACourseListViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet NVUIGradientButton *btChinese;
-@property (strong, nonatomic) IBOutlet NVUIGradientButton *btMath;
-@property (strong, nonatomic) IBOutlet NVUIGradientButton *btEnglish;
-@property (strong, nonatomic) IBOutlet NVUIGradientButton *btPysics;
-@property (strong, nonatomic) IBOutlet NVUIGradientButton *btChemistry;
-@property (strong, nonatomic) IBOutlet NVUIGradientButton *btHistory;
 
 @end
