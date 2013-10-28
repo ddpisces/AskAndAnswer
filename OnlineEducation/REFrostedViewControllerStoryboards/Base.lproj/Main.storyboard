@@ -403,6 +403,7 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -419,16 +420,10 @@
     </scenes>
     <resources>
         <image name="bg_body" width="480" height="800"/>
-        <image name="bg_body" width="480" height="800"/>
-        <image name="bg_body" width="480" height="800"/>
         <image name="btn_photo_c" width="234" height="234"/>
-        <image name="btn_select_category_c" width="458" height="57"/>
         <image name="btn_select_category_c" width="458" height="57"/>
         <image name="content_bg" width="320" height="65"/>
         <image name="teacher" width="90" height="90"/>
-        <image name="text_bg2" width="255" height="231"/>
-        <image name="text_bg2" width="255" height="231"/>
-        <image name="text_bg2" width="255" height="231"/>
         <image name="text_bg2" width="255" height="231"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

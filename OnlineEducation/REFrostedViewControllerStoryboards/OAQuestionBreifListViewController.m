@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
 
+    // remove table cell seperator
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -53,7 +56,7 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 1;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
