@@ -10,4 +10,8 @@
 
 @interface OADataEngine : NSObject
 
++(OADataEngine *)sharedInstance;
+-(void)initDummyData;
+-(NSMutableArray *)getChineseQuestions;
+
 @end
