@@ -109,10 +109,31 @@
     return [NSDate date];
 }
 
+- (UIImage*)avatarForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row % 2 == 0) {
+        return [UIImage imageNamed:@"boy"];
+    }
+    else{
+        return [UIImage imageNamed:@"teacher"];
+    }
+}
+
 #pragma mark - AMBubbleTableDelegate
 
 - (void)didSendText:(NSString*)text
 {
+    NSLog(@"User wrote: %@", text);
+	
+	[self.data addObject:@{ @"text": text,
+                            @"date": [NSDate date],
+                            @"type": @(AMBubbleCellSent)
+                            }];
+	
+	NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(self.data.count - 1) inSection:0];
+	[self.tableView beginUpdates];
+	[self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+	[self.tableView endUpdates];
     
 }
 
