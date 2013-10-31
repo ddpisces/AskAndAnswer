@@ -34,7 +34,7 @@
     [self setDelegate:self];
 	
     // Dummy data
-	self.data = [[OADataEngine sharedInstance] getChineseQuestions][4];
+	self.data = [[OADataEngine sharedInstance] getQuestionsItems:OAHistory][4];
 
     // Set a style
 	[self setTableStyle:AMBubbleTableStyleFlat];

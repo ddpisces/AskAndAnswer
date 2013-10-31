@@ -8,10 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+	OAChinese,
+	OAMath,
+	OAEnglish,
+    OAPysics,
+    OAChemistry,
+    OAHistory
+} MyCourse;
+
 @interface OADataEngine : NSObject
 
 +(OADataEngine *)sharedInstance;
 -(void)initDummyData;
--(NSMutableArray *)getChineseQuestions;
+-(NSMutableArray *)getQuestionsItems:(MyCourse)course;
 
 @end
