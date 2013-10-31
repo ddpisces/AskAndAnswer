@@ -63,6 +63,7 @@
 		F5CC2939182113D300D9CAE6 /* messageBubbleHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CC2912182113D300D9CAE6 /* messageBubbleHighlighted@2x.png */; };
 		F5CC293A182113D300D9CAE6 /* messageBubbleTyping.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CC2913182113D300D9CAE6 /* messageBubbleTyping.png */; };
 		F5CC293B182113D300D9CAE6 /* messageBubbleTyping@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CC2914182113D300D9CAE6 /* messageBubbleTyping@2x.png */; };
+		F5CC293E182205AB00D9CAE6 /* OAQuestionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CC293D182205AB00D9CAE6 /* OAQuestionDetailViewController.m */; };
 		F5F77C6B1817B94F00B7CA73 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C601817B94F00B7CA73 /* RECommonFunctions.m */; };
 		F5F77C6C1817B94F00B7CA73 /* REFrostedContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C621817B94F00B7CA73 /* REFrostedContainerViewController.m */; };
 		F5F77C6D1817B94F00B7CA73 /* REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C641817B94F00B7CA73 /* REFrostedViewController.m */; };
@@ -156,6 +157,8 @@
 		F5CC2912182113D300D9CAE6 /* messageBubbleHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messageBubbleHighlighted@2x.png"; sourceTree = "<group>"; };
 		F5CC2913182113D300D9CAE6 /* messageBubbleTyping.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageBubbleTyping.png; sourceTree = "<group>"; };
 		F5CC2914182113D300D9CAE6 /* messageBubbleTyping@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messageBubbleTyping@2x.png"; sourceTree = "<group>"; };
+		F5CC293C182205AB00D9CAE6 /* OAQuestionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAQuestionDetailViewController.h; path = REFrostedViewControllerStoryboards/OAQuestionDetailViewController.h; sourceTree = SOURCE_ROOT; };
+		F5CC293D182205AB00D9CAE6 /* OAQuestionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAQuestionDetailViewController.m; path = REFrostedViewControllerStoryboards/OAQuestionDetailViewController.m; sourceTree = SOURCE_ROOT; };
 		F5F77C5F1817B94F00B7CA73 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		F5F77C601817B94F00B7CA73 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		F5F77C611817B94F00B7CA73 /* REFrostedContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REFrostedContainerViewController.h; sourceTree = "<group>"; };
@@ -267,6 +270,8 @@
 				3032B8A71805A10100064F85 /* DEMORootViewController.h */,
 				3032B8A81805A10100064F85 /* DEMORootViewController.m */,
 				3032B8CC1805A1BC00064F85 /* DEMOHomeViewController.h */,
+				F5CC293C182205AB00D9CAE6 /* OAQuestionDetailViewController.h */,
+				F5CC293D182205AB00D9CAE6 /* OAQuestionDetailViewController.m */,
 				3032B8CD1805A1BC00064F85 /* DEMOHomeViewController.m */,
 				F5F77C7E181A4C5100B7CA73 /* KMCSimpleTableViewController.h */,
 				F5F77C7F181A4C5100B7CA73 /* KMCSimpleTableViewController.m */,
@@ -507,6 +512,7 @@
 			files = (
 				3032B8CE1805A1BC00064F85 /* DEMOHomeViewController.m in Sources */,
 				F5F77C741818EB4E00B7CA73 /* NVUIGradientButton.m in Sources */,
+				F5CC293E182205AB00D9CAE6 /* OAQuestionDetailViewController.m in Sources */,
 				F5F77C6C1817B94F00B7CA73 /* REFrostedContainerViewController.m in Sources */,
 				3032B89F1805A10100064F85 /* main.m in Sources */,
 				3032B8A91805A10100064F85 /* DEMORootViewController.m in Sources */,
