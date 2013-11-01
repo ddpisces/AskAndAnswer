@@ -10,4 +10,7 @@
 
 @interface OAQuestionDetailViewController : AMBubbleTableViewController
 
+@property (nonatomic) NSInteger selectedCourse;
+@property (nonatomic) NSInteger selectedQuestion;
+
 @end

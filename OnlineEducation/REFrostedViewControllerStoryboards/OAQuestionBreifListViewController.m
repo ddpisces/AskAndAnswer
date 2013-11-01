@@ -7,6 +7,7 @@
 //
 
 #import "OAQuestionBreifListViewController.h"
+#import "OAQuestionDetailViewController.h"
 #import "OABriefListCell.h"
 
 @interface OAQuestionBreifListViewController ()
@@ -15,7 +16,9 @@
 
 @end
 
-@implementation OAQuestionBreifListViewController
+@implementation OAQuestionBreifListViewController{
+    NSInteger selectedQuestion;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -71,6 +74,15 @@
     return cell;
 }
 
+#pragma mark - Table view delegate
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    selectedQuestion = indexPath.row;
+    
+    return indexPath;
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -110,16 +122,16 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    OAQuestionDetailViewController *destiView = [segue destinationViewController];
+    
+    destiView.selectedCourse = self.selectedCourse;
+    destiView.selectedQuestion = selectedQuestion;
 }
-
- */
 
 @end

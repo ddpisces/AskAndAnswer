@@ -34,7 +34,7 @@
     [self setDelegate:self];
 	
     // Dummy data
-	self.data = [[OADataEngine sharedInstance] getQuestionsItems:OAHistory][4];
+	self.data = [[OADataEngine sharedInstance] getQuestionsItems:self.selectedCourse][self.selectedQuestion];
 
     // Set a style
 	[self setTableStyle:AMBubbleTableStyleFlat];
