@@ -29,6 +29,7 @@
 
     // remove table cell seperator
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    NSInteger temp = [self selectedCourse];
 }
 
 - (void)didReceiveMemoryWarning

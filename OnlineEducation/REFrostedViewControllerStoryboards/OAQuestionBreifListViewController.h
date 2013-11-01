@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OADataEngine.h"
 
 @interface OAQuestionBreifListViewController : UITableViewController
+
+@property (nonatomic) NSInteger selectedCourse;
 
 @end
