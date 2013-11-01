@@ -41,8 +41,33 @@
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-//    OAQuestionBreifListViewController *dest = (OAQuestionBreifListViewController *)[segue destinationViewController];
-//    dest.selectedCourse =
+    OAQuestionBreifListViewController *destiView = [segue destinationViewController];
+    
+    if([[segue identifier]isEqualToString:@"segChinese"])
+    {
+        destiView.selectedCourse = OAChinese;
+    }
+    else if ([[segue identifier]isEqualToString:@"segMath"])
+    {
+        destiView.selectedCourse = OAMath;
+    }
+    else if ([[segue identifier]isEqualToString:@"segPhysics"])
+    {
+        destiView.selectedCourse = OAPysics;
+    }
+    else if ([[segue identifier]isEqualToString:@"segEnglish"])
+    {
+        destiView.selectedCourse = OAEnglish;
+    }
+    else if ([[segue identifier]isEqualToString:@"segChemistry"])
+    {
+        destiView.selectedCourse = OAChemistry;
+    }
+    else
+    {
+        destiView.selectedCourse = OAHistory;
+    }
+    
 }
 
 @end

@@ -139,6 +139,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="k43-fx-Ptb" kind="push" identifier="segChinese" id="C7s-5C-fV1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RdX-Wo-Y6w">
                                 <rect key="frame" x="26" y="257" width="121" height="87"/>
@@ -149,6 +152,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="k43-fx-Ptb" kind="push" identifier="segEnglish" id="V1V-Cy-gXt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dyB-3w-HT8">
                                 <rect key="frame" x="176" y="257" width="124" height="86"/>
@@ -159,6 +165,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="k43-fx-Ptb" kind="push" identifier="segPhysics" id="uIm-7E-gTc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f45-Uf-YST">
                                 <rect key="frame" x="26" y="364" width="121" height="90"/>
@@ -169,6 +178,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="k43-fx-Ptb" kind="push" identifier="segHistory" id="ATZ-NK-B8G"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="144-SR-0w2">
                                 <rect key="frame" x="176" y="364" width="124" height="90"/>
@@ -180,7 +192,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="k43-fx-Ptb" kind="push" id="q82-UC-afv"/>
+                                    <segue destination="k43-fx-Ptb" kind="push" identifier="segChemistry" id="ZD2-QU-nq6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jU8-Ik-ENl">
@@ -192,6 +204,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="k43-fx-Ptb" kind="push" identifier="segMath" id="Sqr-8t-mi6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -439,17 +454,11 @@
     </scenes>
     <resources>
         <image name="bg_body" width="480" height="800"/>
-        <image name="bg_body" width="480" height="800"/>
-        <image name="bg_body" width="480" height="800"/>
         <image name="boy" width="78" height="82"/>
         <image name="btn_photo_c" width="234" height="234"/>
         <image name="btn_select_category_c" width="458" height="57"/>
-        <image name="btn_select_category_c" width="458" height="57"/>
         <image name="content_bg" width="320" height="65"/>
         <image name="teacher" width="90" height="90"/>
-        <image name="text_bg2" width="255" height="231"/>
-        <image name="text_bg2" width="255" height="231"/>
-        <image name="text_bg2" width="255" height="231"/>
         <image name="text_bg2" width="255" height="231"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -457,4 +466,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZD2-QU-nq6"/>
+    </inferredMetricsTieBreakers>
 </document>
