@@ -7,8 +7,11 @@
 //
 
 #import "OAQuestionBreifListViewController.h"
+#import "OABriefListCell.h"
 
 @interface OAQuestionBreifListViewController ()
+
+@property (nonatomic, strong) NSMutableArray* data;
 
 @end
 
@@ -29,7 +32,9 @@
 
     // remove table cell seperator
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    NSInteger temp = [self selectedCourse];
+    
+    // Dummy data
+	self.data = [[OADataEngine sharedInstance] getQuestionsItems:_selectedCourse];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,16 +53,20 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return 10;
+    // Return the number of rows in the section.(question + answer)
+    return [self.data count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OAQuestion" forIndexPath:indexPath];
+    OABriefListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OAQuestion" forIndexPath:indexPath];
     
     // Configure the cell...
+    int i = indexPath.row;
+    
+    //label show question and answer
+    [cell.lblQuestion setText:[[self.data objectAtIndex:i] objectAtIndex:0][@"text"]];
+    [cell.lblAnswer setText:[[self.data objectAtIndex:i] objectAtIndex:1][@"text"]];
     
     return cell;
 }
