@@ -39,7 +39,7 @@
             </objects>
             <point key="canvasLocation" x="923" y="298"/>
         </scene>
-        <!--Home View Controller - Home Controller-->
+        <!--Home View Controller-->
         <scene sceneID="4d1-Jz-tGk">
             <objects>
                 <viewController storyboardIdentifier="homeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jsP-Dz-DYG" customClass="DEMOHomeViewController" sceneMemberID="viewController">
@@ -106,8 +106,8 @@
                             </button>
                         </subviews>
                     </view>
-                    <navigationItem key="navigationItem" title="Home Controller" id="HIf-bS-REK">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="SZg-Pf-I50">
+                    <navigationItem key="navigationItem" id="HIf-bS-REK">
+                        <barButtonItem key="leftBarButtonItem" title="菜单" id="SZg-Pf-I50">
                             <connections>
                                 <action selector="showMenu" destination="jsP-Dz-DYG" id="Fp7-R0-lXj"/>
                             </connections>
@@ -118,7 +118,7 @@
             </objects>
             <point key="canvasLocation" x="1470" y="298"/>
         </scene>
-        <!--Course List View Controller-->
+        <!--Course List View Controller - 我的问答-->
         <scene sceneID="SbX-aa-5kC">
             <objects>
                 <viewController id="jNa-TY-5R3" customClass="OACourseListViewController" sceneMemberID="viewController">
@@ -211,7 +211,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Fh7-A1-MS5"/>
+                    <navigationItem key="navigationItem" title="我的问答" id="Fh7-A1-MS5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zp5-TC-PYd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -306,7 +306,7 @@
             </objects>
             <point key="canvasLocation" x="1470" y="979"/>
         </scene>
-        <!--Fill Question View Controller-->
+        <!--Fill Question View Controller - 提问题-->
         <scene sceneID="3Uw-TD-cdc">
             <objects>
                 <viewController id="MkI-tA-lvq" customClass="OAFillQuestionViewController" sceneMemberID="viewController">
@@ -367,7 +367,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tk2-HF-VPT"/>
+                    <navigationItem key="navigationItem" title="提问题" id="tk2-HF-VPT"/>
                     <connections>
                         <outlet property="btCourse" destination="hFo-2F-yV2" id="eNs-vw-Z4W"/>
                         <outlet property="btGrade" destination="QWO-rV-JoO" id="6i1-Nk-4mc"/>

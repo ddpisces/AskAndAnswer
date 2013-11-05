@@ -14,6 +14,12 @@
 
 @implementation DEMOHomeViewController
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.navigationItem.title = @"";
+}
+
 - (IBAction)showMenu
 {
     [self.frostedViewController presentMenuViewController];
