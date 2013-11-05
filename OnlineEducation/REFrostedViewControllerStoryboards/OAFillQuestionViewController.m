@@ -21,6 +21,7 @@ typedef enum {
     NSArray     *courses;
     NSArray     *grades;
     CategorySelection studentSelection;
+    UIImagePickerController *picker;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -101,6 +102,36 @@ typedef enum {
     tableViewController.navigationItem.title = @"请选择科目";
     tableViewController.delegate = self;
     [self presentViewController:navigationController animated:YES completion:nil];
+}
+
+- (IBAction)clickPickImage:(id)sender {
+    picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+    }else
+    {
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *) Picker {
+    [Picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *) Picker
+
+didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    self.btnImagePick.imageView.image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    [Picker dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 @end

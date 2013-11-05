@@ -16,9 +16,12 @@
 @property (strong, nonatomic) IBOutlet NVUIGradientButton *btRaiseQuestion;
 @property (weak, nonatomic) IBOutlet UIButton *btGrade;
 @property (weak, nonatomic) IBOutlet UIButton *btCourse;
+@property (weak, nonatomic) IBOutlet UIButton *btnImagePick;
 
 
 - (IBAction)clickGrade:(id)sender;
 - (IBAction)clickCourse:(id)sender;
+- (IBAction)clickPickImage:(id)sender;
+
 
 @end
