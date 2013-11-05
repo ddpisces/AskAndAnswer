@@ -44,6 +44,7 @@ typedef enum {
     //The rounded corner part, where you specify your view's corner radius:
     self.questionFeild.layer.cornerRadius = 5;
     self.questionFeild.clipsToBounds = YES;
+    self.questionFeild.delegate = self;
     
     // raise question
     self.btRaiseQuestion.text = @"提交问题";
@@ -138,6 +139,16 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     [Picker dismissViewControllerAnimated:YES completion:nil];
     
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if ([text isEqualToString:@"\n"]) {
+        [self.questionFeild resignFirstResponder];
+        return NO;
+    }
+    
+    return YES;
 }
 
 @end

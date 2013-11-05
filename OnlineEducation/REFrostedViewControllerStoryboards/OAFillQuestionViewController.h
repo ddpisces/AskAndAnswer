@@ -10,7 +10,7 @@
 #import "NVUIGradientButton.h"
 #import "KMCSimpleTableViewController.h"
 
-@interface OAFillQuestionViewController : UIViewController<KMCSimpleTableViewControllerDelegate>
+@interface OAFillQuestionViewController : UIViewController<KMCSimpleTableViewControllerDelegate, UITextViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextView *questionFeild;
 @property (strong, nonatomic) IBOutlet NVUIGradientButton *btRaiseQuestion;
@@ -23,6 +23,5 @@
 - (IBAction)clickCourse:(id)sender;
 - (IBAction)clickPickImage:(id)sender;
 - (IBAction)clickRaiseQuestion:(id)sender;
-
 
 @end
