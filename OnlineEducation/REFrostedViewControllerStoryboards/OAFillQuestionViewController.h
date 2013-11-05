@@ -22,6 +22,7 @@
 - (IBAction)clickGrade:(id)sender;
 - (IBAction)clickCourse:(id)sender;
 - (IBAction)clickPickImage:(id)sender;
+- (IBAction)clickRaiseQuestion:(id)sender;
 
 
 @end

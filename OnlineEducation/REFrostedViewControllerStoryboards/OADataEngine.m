@@ -512,4 +512,9 @@ static OADataEngine *sharedEngine = nil;
     return data_chinese;
 }
 
+- (void)addQuestion:(NSDictionary *)myQuestion theCourse:(MyCourse)course
+{
+    
+}
+
 @end

@@ -120,6 +120,12 @@ typedef enum {
     [self presentViewController:picker animated:YES completion:nil];
 }
 
+- (IBAction)clickRaiseQuestion:(id)sender {
+    UIAlertView *raiseQuestionAlter = [[UIAlertView alloc] initWithTitle:@"完成" message:@"您的问题已提交成功！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    
+    [raiseQuestionAlter show];
+}
+
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *) Picker {
     [Picker dismissViewControllerAnimated:YES completion:nil];
 }

@@ -19,8 +19,9 @@ typedef enum {
 
 @interface OADataEngine : NSObject
 
-+(OADataEngine *)sharedInstance;
--(void)initDummyData;
--(NSMutableArray *)getQuestionsItems:(MyCourse)course;
++ (OADataEngine *)sharedInstance;
+- (void)initDummyData;
+- (NSMutableArray *)getQuestionsItems:(MyCourse)course;
+- (void)addQuestion:(NSDictionary *)myQuestion theCourse:(MyCourse)course;
 
 @end
