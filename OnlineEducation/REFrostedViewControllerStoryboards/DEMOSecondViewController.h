@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "REFrostedViewController.h"
+#import "CollapseClick.h"
 
-@interface DEMOSecondViewController : UIViewController
+@interface DEMOSecondViewController : UIViewController<CollapseClickDelegate>
+
+@property (weak, nonatomic) IBOutlet CollapseClick *myCollapseClick;
 
 - (IBAction)showMenu;
+
+
+@property (weak, nonatomic) IBOutlet UIView *myview;
 
 @end

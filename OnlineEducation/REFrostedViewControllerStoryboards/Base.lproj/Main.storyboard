@@ -289,11 +289,10 @@
         <scene sceneID="ajy-0O-wjT">
             <objects>
                 <viewController restorationIdentifier="secondController" storyboardIdentifier="secondController" id="yGP-ij-jME" customClass="DEMOSecondViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zr4-Ue-MTR">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="G1r-wj-wOX" customClass="CollapseClick">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="0.7902456898061645" blue="0.39722655648262306" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </scrollView>
                     <navigationItem key="navigationItem" title="Second Controller" id="8VR-6H-mGr">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="3gh-ed-0Ek">
                             <connections>
@@ -301,6 +300,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="myCollapseClick" destination="G1r-wj-wOX" id="5co-L8-DmA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SBM-yN-hYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
