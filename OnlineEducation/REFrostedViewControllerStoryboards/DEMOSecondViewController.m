@@ -42,17 +42,54 @@
 
 -(int)numberOfCellsForCollapseClick
 {
-    return 3;
+    return 2;
 }
 
 -(NSString *)titleForCollapseClickAtIndex:(int)index
 {
-    return @"lala";
+    switch (index) {
+        case 0:
+            return @"登陆";
+            break;
+            
+        case 1:
+            return @"注册账户";
+            break;
+            
+        default:
+            return @"";
+            break;
+    }
 }
 
 -(UIView *)viewForCollapseClickContentViewAtIndex:(int)index
 {
-    return [[[NSBundle mainBundle] loadNibNamed:@"LoginView" owner:self options:nil] objectAtIndex:0];
+    return [[[NSBundle mainBundle] loadNibNamed:@"LoginView" owner:nil options:nil] objectAtIndex:0];
+}
+
+#pragma mark - Optional Collapse Delegate
+
+-(UIColor *)colorForCollapseClickTitleViewAtIndex:(int)index {
+    return [UIColor colorWithRed:223/255.0f green:47/255.0f blue:51/255.0f alpha:1.0];
+}
+
+
+-(UIColor *)colorForTitleLabelAtIndex:(int)index {
+    return [UIColor colorWithWhite:1.0 alpha:0.85];
+}
+
+-(UIColor *)colorForTitleArrowAtIndex:(int)index {
+    return [UIColor colorWithWhite:0.0 alpha:0.25];
+}
+
+-(void)didClickCollapseClickCellAtIndex:(int)index isNowOpen:(BOOL)open {
+    NSLog(@"%d and it's open:%@", index, (open ? @"YES" : @"NO"));
+}
+
+#pragma mark - TextField Delegate for Demo
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end
