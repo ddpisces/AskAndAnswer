@@ -8,6 +8,7 @@
 
 #import "DEMOSecondViewController.h"
 #import "OALoginView.h"
+#import "OARegistrationView.h"
 
 @interface DEMOSecondViewController ()
 
@@ -76,9 +77,16 @@
             return [objects objectAtIndex:0];
             break;
         }
-        case 1:
-            return [[[NSBundle mainBundle] loadNibNamed:@"Registration" owner:nil options:nil] objectAtIndex:0];
+        case 1:{
+            NSArray *objects2 = [[NSBundle mainBundle] loadNibNamed:@"OARegistrationView" owner:self options:nil];
+            
+            // for resign keyboard
+            ((OARegistrationView *)[objects2 objectAtIndex:0]).username.delegate = self;
+            ((OARegistrationView *)[objects2 objectAtIndex:0]).password.delegate = self;
+            
+            return [objects2 objectAtIndex:0];
             break;
+        }
             
         default:
             return [[[NSBundle mainBundle] loadNibNamed:@"LoginView" owner:nil options:nil] objectAtIndex:0];
