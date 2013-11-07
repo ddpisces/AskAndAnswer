@@ -12,5 +12,6 @@
 @interface DEMOHomeViewController : UIViewController
 
 - (IBAction)showMenu;
+- (IBAction)mySpaceClick:(id)sender;
 
 @end

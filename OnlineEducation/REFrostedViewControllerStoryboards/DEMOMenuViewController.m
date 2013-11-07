@@ -99,7 +99,7 @@
         DEMOHomeViewController *homeViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"homeController"];
         navigationController.viewControllers = @[homeViewController];
     } else {
-        DEMOSecondViewController *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"secondController"];
+        DEMOSecondViewController *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"mySpace"];
         navigationController.viewControllers = @[secondViewController];
     }
     

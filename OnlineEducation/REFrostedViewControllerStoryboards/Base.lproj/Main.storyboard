@@ -94,6 +94,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="mySpaceClick:" destination="jsP-Dz-DYG" eventType="touchUpInside" id="lPB-GN-pjF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CeD-cC-MFu">
                                 <rect key="frame" x="178" y="169" width="110" height="100"/>
@@ -288,7 +291,7 @@
         <!--Second View Controller-->
         <scene sceneID="ajy-0O-wjT">
             <objects>
-                <viewController restorationIdentifier="secondController" storyboardIdentifier="secondController" id="yGP-ij-jME" customClass="DEMOSecondViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="mySpace" storyboardIdentifier="mySpace" id="yGP-ij-jME" customClass="DEMOSecondViewController" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="G1r-wj-wOX" customClass="CollapseClick">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -465,17 +468,11 @@
     </scenes>
     <resources>
         <image name="bg_body" width="480" height="800"/>
-        <image name="bg_body" width="480" height="800"/>
-        <image name="bg_body" width="480" height="800"/>
         <image name="boy" width="78" height="82"/>
         <image name="btn_photo_c" width="234" height="234"/>
         <image name="btn_select_category_c" width="458" height="57"/>
-        <image name="btn_select_category_c" width="458" height="57"/>
         <image name="content_bg" width="320" height="65"/>
         <image name="teacher" width="90" height="90"/>
-        <image name="text_bg2" width="255" height="231"/>
-        <image name="text_bg2" width="255" height="231"/>
-        <image name="text_bg2" width="255" height="231"/>
         <image name="text_bg2" width="255" height="231"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

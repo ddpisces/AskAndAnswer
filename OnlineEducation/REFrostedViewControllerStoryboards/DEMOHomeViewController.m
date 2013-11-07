@@ -7,6 +7,7 @@
 //
 
 #import "DEMOHomeViewController.h"
+#import "DEMOSecondViewController.h"
 
 @interface DEMOHomeViewController ()
 
@@ -23,6 +24,15 @@
 - (IBAction)showMenu
 {
     [self.frostedViewController presentMenuViewController];
+}
+
+- (IBAction)mySpaceClick:(id)sender {
+    DEMOSecondViewController *creditspage = [self.storyboard instantiateViewControllerWithIdentifier:@"mySpace"];
+    [UIView beginAnimations:@"flipping view" context:nil];
+    [UIView setAnimationDuration:0.75];
+    [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.navigationController.view cache:YES];
+    [self.navigationController pushViewController:creditspage animated:NO];
+    [UIView commitAnimations];
 }
 
 @end
