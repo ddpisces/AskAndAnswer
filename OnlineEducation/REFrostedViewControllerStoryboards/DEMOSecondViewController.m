@@ -66,15 +66,15 @@
 {
     switch (index) {
         case 0:
-            return [self loginView];
+            return [[[NSBundle mainBundle] loadNibNamed:@"LoginView" owner:nil options:nil] objectAtIndex:0];
             break;
         
         case 1:
-            return [self registerView];
+            return [[[NSBundle mainBundle] loadNibNamed:@"Registration" owner:nil options:nil] objectAtIndex:0];
             break;
             
         default:
-            return [self loginView];
+            return [[[NSBundle mainBundle] loadNibNamed:@"LoginView" owner:nil options:nil] objectAtIndex:0];
             break;
     }
 }

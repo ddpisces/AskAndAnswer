@@ -15,10 +15,6 @@
     __weak IBOutlet CollapseClick *myCollapseClick;
 }
 
-//@property (weak, nonatomic) IBOutlet CollapseClick *myCollapseClick;
-@property (weak, nonatomic) IBOutlet UIView *loginView;
-@property (weak, nonatomic) IBOutlet UIView *registerView;
-
 - (IBAction)showMenu;
 
 @end
