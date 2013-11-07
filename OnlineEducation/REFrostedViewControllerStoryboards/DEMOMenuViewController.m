@@ -10,6 +10,7 @@
 #import "DEMOHomeViewController.h"
 #import "DEMOSecondViewController.h"
 #import "UIViewController+REFrostedViewController.h"
+#import "OAQuestionBreifListViewController.h"
 
 @interface DEMOMenuViewController ()
 
@@ -98,9 +99,13 @@
     if (indexPath.section == 0 && indexPath.row == 0) {
         DEMOHomeViewController *homeViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"homeController"];
         navigationController.viewControllers = @[homeViewController];
-    } else {
+    } else if (indexPath.section == 0 && indexPath.row == 1) {
         DEMOSecondViewController *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"mySpace"];
         navigationController.viewControllers = @[secondViewController];
+    } else {
+        OAQuestionBreifListViewController *briefViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"questionBreifList"];
+        briefViewController.selectedCourse = indexPath.row;
+        navigationController.viewControllers = @[briefViewController];
     }
     
     [self.frostedViewController hideMenuViewController];
