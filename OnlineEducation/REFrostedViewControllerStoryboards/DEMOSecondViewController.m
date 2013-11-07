@@ -7,6 +7,7 @@
 //
 
 #import "DEMOSecondViewController.h"
+#import "OALoginView.h"
 
 @interface DEMOSecondViewController ()
 
@@ -65,10 +66,16 @@
 -(UIView *)viewForCollapseClickContentViewAtIndex:(int)index
 {
     switch (index) {
-        case 0:
-            return [[[NSBundle mainBundle] loadNibNamed:@"LoginView" owner:nil options:nil] objectAtIndex:0];
+        case 0:{
+            NSArray *objects = [[NSBundle mainBundle] loadNibNamed:@"OALoginView" owner:self options:nil];
+
+            // for resign keyboard
+            ((OALoginView *)[objects objectAtIndex:0]).username.delegate = self;
+            ((OALoginView *)[objects objectAtIndex:0]).password.delegate = self;
+            
+            return [objects objectAtIndex:0];
             break;
-        
+        }
         case 1:
             return [[[NSBundle mainBundle] loadNibNamed:@"Registration" owner:nil options:nil] objectAtIndex:0];
             break;

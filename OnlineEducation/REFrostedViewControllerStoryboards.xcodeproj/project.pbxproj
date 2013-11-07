@@ -69,9 +69,10 @@
 		F5F56D7A182A0A0C009B230C /* CollapseClick.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F56D74182A0A0C009B230C /* CollapseClick.m */; };
 		F5F56D7B182A0A0C009B230C /* CollapseClickArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F56D76182A0A0C009B230C /* CollapseClickArrow.m */; };
 		F5F56D7C182A0A0C009B230C /* CollapseClickCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F56D78182A0A0C009B230C /* CollapseClickCell.m */; };
-		F5F56E80182A3383009B230C /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5F56E7F182A3383009B230C /* LoginView.xib */; };
 		F5F56E94182B356E009B230C /* CollapseClickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5F56E93182B356E009B230C /* CollapseClickCell.xib */; };
 		F5F56E96182B393D009B230C /* Registration.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5F56E95182B393D009B230C /* Registration.xib */; };
+		F5F56E99182B426D009B230C /* OALoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F56E98182B426D009B230C /* OALoginView.m */; };
+		F5F56E9B182B5C37009B230C /* OALoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5F56E9A182B5C37009B230C /* OALoginView.xib */; };
 		F5F77C6B1817B94F00B7CA73 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C601817B94F00B7CA73 /* RECommonFunctions.m */; };
 		F5F77C6C1817B94F00B7CA73 /* REFrostedContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C621817B94F00B7CA73 /* REFrostedContainerViewController.m */; };
 		F5F77C6D1817B94F00B7CA73 /* REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C641817B94F00B7CA73 /* REFrostedViewController.m */; };
@@ -177,9 +178,11 @@
 		F5F56D76182A0A0C009B230C /* CollapseClickArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClickArrow.m; sourceTree = "<group>"; };
 		F5F56D77182A0A0C009B230C /* CollapseClickCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapseClickCell.h; sourceTree = "<group>"; };
 		F5F56D78182A0A0C009B230C /* CollapseClickCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClickCell.m; sourceTree = "<group>"; };
-		F5F56E7F182A3383009B230C /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		F5F56E93182B356E009B230C /* CollapseClickCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollapseClickCell.xib; sourceTree = "<group>"; };
 		F5F56E95182B393D009B230C /* Registration.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Registration.xib; sourceTree = "<group>"; };
+		F5F56E97182B426D009B230C /* OALoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OALoginView.h; sourceTree = "<group>"; };
+		F5F56E98182B426D009B230C /* OALoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OALoginView.m; sourceTree = "<group>"; };
+		F5F56E9A182B5C37009B230C /* OALoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OALoginView.xib; sourceTree = "<group>"; };
 		F5F77C5F1817B94F00B7CA73 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		F5F77C601817B94F00B7CA73 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		F5F77C611817B94F00B7CA73 /* REFrostedContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REFrostedContainerViewController.h; sourceTree = "<group>"; };
@@ -380,7 +383,6 @@
 			isa = PBXGroup;
 			children = (
 				F5F56D73182A0A0C009B230C /* CollapseClick.h */,
-				F5F56E7F182A3383009B230C /* LoginView.xib */,
 				F5F56E95182B393D009B230C /* Registration.xib */,
 				F5F56D74182A0A0C009B230C /* CollapseClick.m */,
 				F5F56D75182A0A0C009B230C /* CollapseClickArrow.h */,
@@ -388,6 +390,9 @@
 				F5F56D76182A0A0C009B230C /* CollapseClickArrow.m */,
 				F5F56D77182A0A0C009B230C /* CollapseClickCell.h */,
 				F5F56D78182A0A0C009B230C /* CollapseClickCell.m */,
+				F5F56E9A182B5C37009B230C /* OALoginView.xib */,
+				F5F56E97182B426D009B230C /* OALoginView.h */,
+				F5F56E98182B426D009B230C /* OALoginView.m */,
 			);
 			path = CollapseClick;
 			sourceTree = "<group>";
@@ -504,6 +509,7 @@
 				F5CC291F182113D300D9CAE6 /* bubbleSquareIncoming@2x.png in Resources */,
 				3032B8FD1805AB5600064F85 /* avatar@2x.jpg in Resources */,
 				F5CC2928182113D300D9CAE6 /* buttonSendHighlightedFlat.png in Resources */,
+				F5F56E9B182B5C37009B230C /* OALoginView.xib in Resources */,
 				F5CC291E182113D300D9CAE6 /* bubbleSquareIncoming.png in Resources */,
 				F5CC2936182113D300D9CAE6 /* messageBubbleGreen.png in Resources */,
 				F5CC291C182113D300D9CAE6 /* bubbleFlatOutgoing.png in Resources */,
@@ -515,7 +521,6 @@
 				F5CC291B182113D300D9CAE6 /* bubbleFlatIncoming@2x.png in Resources */,
 				F5CC292B182113D300D9CAE6 /* imageBar@2x.png in Resources */,
 				F5CC291D182113D300D9CAE6 /* bubbleFlatOutgoing@2x.png in Resources */,
-				F5F56E80182A3383009B230C /* LoginView.xib in Resources */,
 				F5CC2921182113D300D9CAE6 /* bubbleSquareOutgoing@2x.png in Resources */,
 				F5CC292F182113D300D9CAE6 /* imageInput@2x.png in Resources */,
 				F5CC2939182113D300D9CAE6 /* messageBubbleHighlighted@2x.png in Resources */,
@@ -581,6 +586,7 @@
 				F5CC294418236B7500D9CAE6 /* OABriefListCell.m in Sources */,
 				F5F77C6D1817B94F00B7CA73 /* REFrostedViewController.m in Sources */,
 				F5CC29411822334000D9CAE6 /* OADataEngine.m in Sources */,
+				F5F56E99182B426D009B230C /* OALoginView.m in Sources */,
 				F5CC2916182113D300D9CAE6 /* AMBubbleFlatAccessoryView.m in Sources */,
 				F5CC2918182113D300D9CAE6 /* AMBubbleTableCell.m in Sources */,
 				F5F77C85181E686E00B7CA73 /* OAQuestionBreifListViewController.m in Sources */,
