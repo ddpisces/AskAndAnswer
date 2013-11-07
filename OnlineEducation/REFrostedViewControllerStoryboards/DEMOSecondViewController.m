@@ -17,11 +17,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.myCollapseClick.CollapseClickDelegate = self;
-    [self.myCollapseClick reloadCollapseClick];
+    myCollapseClick.CollapseClickDelegate = self;
+    [myCollapseClick reloadCollapseClick];
     
     // If you want a cell open on load, run this method:
-    [self.myCollapseClick openCollapseClickCellAtIndex:1 animated:NO];
+    [myCollapseClick openCollapseClickCellAtIndex:1 animated:NO];
     
     /*
      // If you'd like multiple cells open on load, create an NSArray of NSNumbers
@@ -64,7 +64,19 @@
 
 -(UIView *)viewForCollapseClickContentViewAtIndex:(int)index
 {
-    return [[[NSBundle mainBundle] loadNibNamed:@"LoginView" owner:nil options:nil] objectAtIndex:0];
+    switch (index) {
+        case 0:
+            return [self loginView];
+            break;
+        
+        case 1:
+            return [self registerView];
+            break;
+            
+        default:
+            return [self loginView];
+            break;
+    }
 }
 
 #pragma mark - Optional Collapse Delegate

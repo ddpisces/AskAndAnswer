@@ -69,8 +69,8 @@
 		F5F56D7A182A0A0C009B230C /* CollapseClick.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F56D74182A0A0C009B230C /* CollapseClick.m */; };
 		F5F56D7B182A0A0C009B230C /* CollapseClickArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F56D76182A0A0C009B230C /* CollapseClickArrow.m */; };
 		F5F56D7C182A0A0C009B230C /* CollapseClickCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F56D78182A0A0C009B230C /* CollapseClickCell.m */; };
-		F5F56D7D182A0A0C009B230C /* CollapseClickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5F56D79182A0A0C009B230C /* CollapseClickCell.xib */; };
 		F5F56E80182A3383009B230C /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5F56E7F182A3383009B230C /* LoginView.xib */; };
+		F5F56E94182B356E009B230C /* CollapseClickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5F56E93182B356E009B230C /* CollapseClickCell.xib */; };
 		F5F77C6B1817B94F00B7CA73 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C601817B94F00B7CA73 /* RECommonFunctions.m */; };
 		F5F77C6C1817B94F00B7CA73 /* REFrostedContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C621817B94F00B7CA73 /* REFrostedContainerViewController.m */; };
 		F5F77C6D1817B94F00B7CA73 /* REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C641817B94F00B7CA73 /* REFrostedViewController.m */; };
@@ -176,8 +176,8 @@
 		F5F56D76182A0A0C009B230C /* CollapseClickArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClickArrow.m; sourceTree = "<group>"; };
 		F5F56D77182A0A0C009B230C /* CollapseClickCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapseClickCell.h; sourceTree = "<group>"; };
 		F5F56D78182A0A0C009B230C /* CollapseClickCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClickCell.m; sourceTree = "<group>"; };
-		F5F56D79182A0A0C009B230C /* CollapseClickCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollapseClickCell.xib; sourceTree = "<group>"; };
 		F5F56E7F182A3383009B230C /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		F5F56E93182B356E009B230C /* CollapseClickCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollapseClickCell.xib; sourceTree = "<group>"; };
 		F5F77C5F1817B94F00B7CA73 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		F5F77C601817B94F00B7CA73 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		F5F77C611817B94F00B7CA73 /* REFrostedContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REFrostedContainerViewController.h; sourceTree = "<group>"; };
@@ -381,10 +381,10 @@
 				F5F56E7F182A3383009B230C /* LoginView.xib */,
 				F5F56D74182A0A0C009B230C /* CollapseClick.m */,
 				F5F56D75182A0A0C009B230C /* CollapseClickArrow.h */,
+				F5F56E93182B356E009B230C /* CollapseClickCell.xib */,
 				F5F56D76182A0A0C009B230C /* CollapseClickArrow.m */,
 				F5F56D77182A0A0C009B230C /* CollapseClickCell.h */,
 				F5F56D78182A0A0C009B230C /* CollapseClickCell.m */,
-				F5F56D79182A0A0C009B230C /* CollapseClickCell.xib */,
 			);
 			path = CollapseClick;
 			sourceTree = "<group>";
@@ -510,7 +510,6 @@
 				F5CC291A182113D300D9CAE6 /* bubbleFlatIncoming.png in Resources */,
 				F5CC291B182113D300D9CAE6 /* bubbleFlatIncoming@2x.png in Resources */,
 				F5CC292B182113D300D9CAE6 /* imageBar@2x.png in Resources */,
-				F5F56D7D182A0A0C009B230C /* CollapseClickCell.xib in Resources */,
 				F5CC291D182113D300D9CAE6 /* bubbleFlatOutgoing@2x.png in Resources */,
 				F5F56E80182A3383009B230C /* LoginView.xib in Resources */,
 				F5CC2921182113D300D9CAE6 /* bubbleSquareOutgoing@2x.png in Resources */,
@@ -534,6 +533,7 @@
 				F5CC2927182113D300D9CAE6 /* buttonSendHighlighted@2x.png in Resources */,
 				F5CC2933182113D300D9CAE6 /* messageBubbleBlue@2x.png in Resources */,
 				F5CC2925182113D300D9CAE6 /* buttonSendFlat@2x.png in Resources */,
+				F5F56E94182B356E009B230C /* CollapseClickCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

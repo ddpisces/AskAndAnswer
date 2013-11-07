@@ -301,7 +301,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="myCollapseClick" destination="G1r-wj-wOX" id="5co-L8-DmA"/>
+                        <outlet property="myCollapseClick" destination="G1r-wj-wOX" id="W7i-zz-jWX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SBM-yN-hYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
