@@ -429,10 +429,15 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="MGw-fx-Trx">
+                                            <rect key="frame" x="20" y="43" width="20" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
+                                    <outlet property="imgAttach" destination="MGw-fx-Trx" id="wg1-Hj-Iok"/>
                                     <outlet property="lblAnswer" destination="y4z-w0-QeH" id="FCb-su-DUq"/>
                                     <outlet property="lblQuestion" destination="KSc-ro-57V" id="lGz-y6-PIN"/>
                                     <segue destination="8E3-mm-pP3" kind="push" id="9Fe-LI-jhL"/>

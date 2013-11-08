@@ -71,6 +71,27 @@
     [cell.lblQuestion setText:[[self.data objectAtIndex:i] objectAtIndex:0][@"text"]];
     [cell.lblAnswer setText:[[self.data objectAtIndex:i] objectAtIndex:1][@"text"]];
     
+    // if question raised by student containting image
+    AMBubbleHasImage hasImage;
+    if ([[self.data objectAtIndex:i] objectAtIndex:0][@"hasImage"]) {
+        hasImage = [[[self.data objectAtIndex:i] objectAtIndex:0][@"hasImage"] intValue];
+    } else {
+        hasImage = AMNOImage;
+    }
+    
+    // if question asked by teacher containing image
+    AMBubbleHasImage hasImage2;
+    if ([[self.data objectAtIndex:i] objectAtIndex:1][@"hasImage"]) {
+        hasImage2 = [[[self.data objectAtIndex:i] objectAtIndex:1][@"hasImage"] intValue];
+    } else {
+        hasImage2 = AMNOImage;
+    }
+    
+    // set has image icon on brief list
+    if ((hasImage == AMHasImage) || (hasImage2 == AMHasImage)) {
+        [cell.imgAttach setImage:[UIImage imageNamed:@"attachment.png"]];
+    }
+    
     return cell;
 }
 
