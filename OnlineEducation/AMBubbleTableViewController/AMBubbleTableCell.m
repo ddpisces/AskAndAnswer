@@ -105,6 +105,9 @@
 											 sizeText.width + 5.0f,
 											 sizeText.height)
 						  andText:params[@"text"]];
+        
+        [self setupCellAttachment:type
+                             andPath:@"attachment"];
 	}
 	
 	if (type == AMBubbleCellReceived) {
@@ -153,6 +156,9 @@
 					   background:rect
 						textFrame:CGRectMake(22.0f, 4.0 + usernameSize.height, sizeText.width + 5.0f, sizeText.height)
 						  andText:params[@"text"]];
+        
+        [self setupCellAttachment:type
+                          andPath:@"attachment"];
 	}
 	
 	if (type == AMBubbleCellTimestamp) {
@@ -192,10 +198,16 @@
 - (void)setupCellAttachment:(AMBubbleCellType)type andPath:(NSString*)path
 {
     if (type == AMBubbleCellReceived) {
-		[self.cellAttachment setFrame:CGRectMake(0, 0, 20, 20)];
+        // attachment size
+		[self.cellAttachment setFrame:CGRectMake(260, 5, 20, 20)];
+        
 	} else {
-		[self.imageBackground setImage:self.options[AMOptionsImageOutgoing]];
+		// attachment size
+		[self.cellAttachment setFrame:CGRectMake(20, 5, 20, 20)];
 	}
+    
+    // attachment image
+    [self.cellAttachment setImage:[UIImage imageNamed:path]];
 }
 
 
