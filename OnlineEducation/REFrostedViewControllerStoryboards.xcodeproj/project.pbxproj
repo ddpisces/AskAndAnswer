@@ -74,6 +74,7 @@
 		F5F56E9B182B5C37009B230C /* OALoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5F56E9A182B5C37009B230C /* OALoginView.xib */; };
 		F5F56E9E182B72EA009B230C /* OARegistrationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F56E9D182B72EA009B230C /* OARegistrationView.m */; };
 		F5F56EA0182B77A7009B230C /* OARegistrationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5F56E9F182B77A7009B230C /* OARegistrationView.xib */; };
+		F5F56EEB183228EC009B230C /* OACellAttachmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F56EEA183228EB009B230C /* OACellAttachmentView.m */; };
 		F5F77C6B1817B94F00B7CA73 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C601817B94F00B7CA73 /* RECommonFunctions.m */; };
 		F5F77C6C1817B94F00B7CA73 /* REFrostedContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C621817B94F00B7CA73 /* REFrostedContainerViewController.m */; };
 		F5F77C6D1817B94F00B7CA73 /* REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C641817B94F00B7CA73 /* REFrostedViewController.m */; };
@@ -186,6 +187,8 @@
 		F5F56E9C182B72EA009B230C /* OARegistrationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OARegistrationView.h; sourceTree = "<group>"; };
 		F5F56E9D182B72EA009B230C /* OARegistrationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OARegistrationView.m; sourceTree = "<group>"; };
 		F5F56E9F182B77A7009B230C /* OARegistrationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OARegistrationView.xib; sourceTree = "<group>"; };
+		F5F56EE9183228EB009B230C /* OACellAttachmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OACellAttachmentView.h; sourceTree = "<group>"; };
+		F5F56EEA183228EB009B230C /* OACellAttachmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OACellAttachmentView.m; sourceTree = "<group>"; };
 		F5F77C5F1817B94F00B7CA73 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		F5F77C601817B94F00B7CA73 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		F5F77C611817B94F00B7CA73 /* REFrostedContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REFrostedContainerViewController.h; sourceTree = "<group>"; };
@@ -327,6 +330,8 @@
 			isa = PBXGroup;
 			children = (
 				F5CC28E8182113D300D9CAE6 /* AMBubbleAccessoryView.h */,
+				F5F56EE9183228EB009B230C /* OACellAttachmentView.h */,
+				F5F56EEA183228EB009B230C /* OACellAttachmentView.m */,
 				F5CC28E9182113D300D9CAE6 /* AMBubbleAccessoryView.m */,
 				F5CC28EA182113D300D9CAE6 /* AMBubbleFlatAccessoryView.h */,
 				F5CC28EB182113D300D9CAE6 /* AMBubbleFlatAccessoryView.m */,
@@ -570,6 +575,7 @@
 				F5CC293E182205AB00D9CAE6 /* OAQuestionDetailViewController.m in Sources */,
 				F5F77C6C1817B94F00B7CA73 /* REFrostedContainerViewController.m in Sources */,
 				3032B89F1805A10100064F85 /* main.m in Sources */,
+				F5F56EEB183228EC009B230C /* OACellAttachmentView.m in Sources */,
 				3032B8A91805A10100064F85 /* DEMORootViewController.m in Sources */,
 				F5F56E9E182B72EA009B230C /* OARegistrationView.m in Sources */,
 				F5F77C7A1818FA8700B7CA73 /* OACourseListViewController.m in Sources */,

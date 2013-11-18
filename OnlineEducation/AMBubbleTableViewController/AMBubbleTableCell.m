@@ -8,6 +8,7 @@
 
 #import "AMBubbleTableCell.h"
 #import "AMBubbleAccessoryView.h"
+#import "OACellAttachmentView.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface AMBubbleTableCell ()
@@ -17,6 +18,7 @@
 @property (nonatomic, strong) UIImageView*	imageBackground;
 @property (nonatomic, strong) UILabel*		labelUsername;
 @property (nonatomic, strong) UIView<AMBubbleAccessory>*		bubbleAccessory;
+@property (nonatomic, strong) OACellAttachmentView* cellAttachment;
 
 @end
 
@@ -39,6 +41,10 @@
 		[self.imageBackground addSubview:self.labelText];
 		[self.imageBackground addSubview:self.labelUsername];
 		[self.contentView addSubview:self.bubbleAccessory];
+        
+        // init cell attachment
+        self.cellAttachment = [[OACellAttachmentView alloc] init];
+        [self.contentView addSubview:self.cellAttachment];
     }
     return self;
 }
@@ -183,6 +189,14 @@
 	[self.labelText setText:text];
 }
 
+- (void)setupCellAttachment:(AMBubbleCellType)type andPath:(NSString*)path
+{
+    if (type == AMBubbleCellReceived) {
+		[self.cellAttachment setFrame:CGRectMake(0, 0, 20, 20)];
+	} else {
+		[self.imageBackground setImage:self.options[AMOptionsImageOutgoing]];
+	}
+}
 
 
 @end
