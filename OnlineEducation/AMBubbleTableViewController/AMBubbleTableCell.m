@@ -8,7 +8,6 @@
 
 #import "AMBubbleTableCell.h"
 #import "AMBubbleAccessoryView.h"
-#import "OACellAttachmentView.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface AMBubbleTableCell ()
@@ -18,7 +17,7 @@
 @property (nonatomic, strong) UIImageView*	imageBackground;
 @property (nonatomic, strong) UILabel*		labelUsername;
 @property (nonatomic, strong) UIView<AMBubbleAccessory>*		bubbleAccessory;
-@property (nonatomic, strong) OACellAttachmentView* cellAttachment;
+@property (nonatomic, weak)   UIButton* cellAttachment;
 
 @end
 
@@ -43,7 +42,9 @@
 		[self.contentView addSubview:self.bubbleAccessory];
         
         // init cell attachment
-        self.cellAttachment = [[OACellAttachmentView alloc] init];
+        self.cellAttachment = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.cellAttachment.imageView.contentMode = UIViewContentModeScaleAspectFill;
+        [self.cellAttachment addTarget:self action:@selector(attachmentClick) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:self.cellAttachment];
     }
     return self;
@@ -207,7 +208,12 @@
 	}
     
     // attachment image
-    [self.cellAttachment setImage:[UIImage imageNamed:path]];
+    [self.cellAttachment setBackgroundImage:[UIImage imageNamed:path] forState:UIControlStateNormal];
+}
+
+- (void)attachmentClick
+{
+    
 }
 
 

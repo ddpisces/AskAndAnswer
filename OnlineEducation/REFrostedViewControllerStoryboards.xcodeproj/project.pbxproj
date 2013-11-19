@@ -74,7 +74,10 @@
 		F5F56E9B182B5C37009B230C /* OALoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5F56E9A182B5C37009B230C /* OALoginView.xib */; };
 		F5F56E9E182B72EA009B230C /* OARegistrationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F56E9D182B72EA009B230C /* OARegistrationView.m */; };
 		F5F56EA0182B77A7009B230C /* OARegistrationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5F56E9F182B77A7009B230C /* OARegistrationView.xib */; };
-		F5F56EEB183228EC009B230C /* OACellAttachmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F56EEA183228EB009B230C /* OACellAttachmentView.m */; };
+		F5F56EF4183B121A009B230C /* TGRImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F56EEE183B121A009B230C /* TGRImageViewController.m */; };
+		F5F56EF5183B121A009B230C /* TGRImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5F56EEF183B121A009B230C /* TGRImageViewController.xib */; };
+		F5F56EF6183B121A009B230C /* TGRImageZoomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F56EF1183B121A009B230C /* TGRImageZoomAnimationController.m */; };
+		F5F56EF7183B121A009B230C /* UIImage+AspectFit.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F56EF3183B121A009B230C /* UIImage+AspectFit.m */; };
 		F5F77C6B1817B94F00B7CA73 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C601817B94F00B7CA73 /* RECommonFunctions.m */; };
 		F5F77C6C1817B94F00B7CA73 /* REFrostedContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C621817B94F00B7CA73 /* REFrostedContainerViewController.m */; };
 		F5F77C6D1817B94F00B7CA73 /* REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C641817B94F00B7CA73 /* REFrostedViewController.m */; };
@@ -187,8 +190,13 @@
 		F5F56E9C182B72EA009B230C /* OARegistrationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OARegistrationView.h; sourceTree = "<group>"; };
 		F5F56E9D182B72EA009B230C /* OARegistrationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OARegistrationView.m; sourceTree = "<group>"; };
 		F5F56E9F182B77A7009B230C /* OARegistrationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OARegistrationView.xib; sourceTree = "<group>"; };
-		F5F56EE9183228EB009B230C /* OACellAttachmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OACellAttachmentView.h; sourceTree = "<group>"; };
-		F5F56EEA183228EB009B230C /* OACellAttachmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OACellAttachmentView.m; sourceTree = "<group>"; };
+		F5F56EED183B121A009B230C /* TGRImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRImageViewController.h; sourceTree = "<group>"; };
+		F5F56EEE183B121A009B230C /* TGRImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRImageViewController.m; sourceTree = "<group>"; };
+		F5F56EEF183B121A009B230C /* TGRImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGRImageViewController.xib; sourceTree = "<group>"; };
+		F5F56EF0183B121A009B230C /* TGRImageZoomAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRImageZoomAnimationController.h; sourceTree = "<group>"; };
+		F5F56EF1183B121A009B230C /* TGRImageZoomAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRImageZoomAnimationController.m; sourceTree = "<group>"; };
+		F5F56EF2183B121A009B230C /* UIImage+AspectFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AspectFit.h"; sourceTree = "<group>"; };
+		F5F56EF3183B121A009B230C /* UIImage+AspectFit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AspectFit.m"; sourceTree = "<group>"; };
 		F5F77C5F1817B94F00B7CA73 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		F5F77C601817B94F00B7CA73 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		F5F77C611817B94F00B7CA73 /* REFrostedContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REFrostedContainerViewController.h; sourceTree = "<group>"; };
@@ -240,6 +248,7 @@
 		3032B8861805A10100064F85 = {
 			isa = PBXGroup;
 			children = (
+				F5F56EEC183B121A009B230C /* Vertigo */,
 				F5F56D72182A0A0C009B230C /* CollapseClick */,
 				F5CC28E7182113D300D9CAE6 /* AMBubbleTableViewController */,
 				F5F77C711818EB4E00B7CA73 /* NVUIGradientButton */,
@@ -330,8 +339,6 @@
 			isa = PBXGroup;
 			children = (
 				F5CC28E8182113D300D9CAE6 /* AMBubbleAccessoryView.h */,
-				F5F56EE9183228EB009B230C /* OACellAttachmentView.h */,
-				F5F56EEA183228EB009B230C /* OACellAttachmentView.m */,
 				F5CC28E9182113D300D9CAE6 /* AMBubbleAccessoryView.m */,
 				F5CC28EA182113D300D9CAE6 /* AMBubbleFlatAccessoryView.h */,
 				F5CC28EB182113D300D9CAE6 /* AMBubbleFlatAccessoryView.m */,
@@ -405,6 +412,20 @@
 				F5F56E98182B426D009B230C /* OALoginView.m */,
 			);
 			path = CollapseClick;
+			sourceTree = "<group>";
+		};
+		F5F56EEC183B121A009B230C /* Vertigo */ = {
+			isa = PBXGroup;
+			children = (
+				F5F56EED183B121A009B230C /* TGRImageViewController.h */,
+				F5F56EEE183B121A009B230C /* TGRImageViewController.m */,
+				F5F56EEF183B121A009B230C /* TGRImageViewController.xib */,
+				F5F56EF0183B121A009B230C /* TGRImageZoomAnimationController.h */,
+				F5F56EF1183B121A009B230C /* TGRImageZoomAnimationController.m */,
+				F5F56EF2183B121A009B230C /* UIImage+AspectFit.h */,
+				F5F56EF3183B121A009B230C /* UIImage+AspectFit.m */,
+			);
+			path = Vertigo;
 			sourceTree = "<group>";
 		};
 		F5F77C5E1817B94F00B7CA73 /* REFrostedViewController */ = {
@@ -534,6 +555,7 @@
 				F5CC2921182113D300D9CAE6 /* bubbleSquareOutgoing@2x.png in Resources */,
 				F5CC292F182113D300D9CAE6 /* imageInput@2x.png in Resources */,
 				F5CC2939182113D300D9CAE6 /* messageBubbleHighlighted@2x.png in Resources */,
+				F5F56EF5183B121A009B230C /* TGRImageViewController.xib in Resources */,
 				F5CC2922182113D300D9CAE6 /* buttonSend.png in Resources */,
 				3032B89D1805A10100064F85 /* InfoPlist.strings in Resources */,
 				F5CC2937182113D300D9CAE6 /* messageBubbleGreen@2x.png in Resources */,
@@ -575,7 +597,7 @@
 				F5CC293E182205AB00D9CAE6 /* OAQuestionDetailViewController.m in Sources */,
 				F5F77C6C1817B94F00B7CA73 /* REFrostedContainerViewController.m in Sources */,
 				3032B89F1805A10100064F85 /* main.m in Sources */,
-				F5F56EEB183228EC009B230C /* OACellAttachmentView.m in Sources */,
+				F5F56EF7183B121A009B230C /* UIImage+AspectFit.m in Sources */,
 				3032B8A91805A10100064F85 /* DEMORootViewController.m in Sources */,
 				F5F56E9E182B72EA009B230C /* OARegistrationView.m in Sources */,
 				F5F77C7A1818FA8700B7CA73 /* OACourseListViewController.m in Sources */,
@@ -590,10 +612,12 @@
 				F5CC2919182113D300D9CAE6 /* AMBubbleTableViewController.m in Sources */,
 				F5CC2917182113D300D9CAE6 /* AMBubbleGlobals.m in Sources */,
 				F5F77C6F1817B94F00B7CA73 /* UIView+REFrostedViewController.m in Sources */,
+				F5F56EF4183B121A009B230C /* TGRImageViewController.m in Sources */,
 				F5F77C80181A4C5100B7CA73 /* KMCSimpleTableViewController.m in Sources */,
 				3032B8E71805A26500064F85 /* DEMONavigationController.m in Sources */,
 				F5F56D7B182A0A0C009B230C /* CollapseClickArrow.m in Sources */,
 				F5F77C6B1817B94F00B7CA73 /* RECommonFunctions.m in Sources */,
+				F5F56EF6183B121A009B230C /* TGRImageZoomAnimationController.m in Sources */,
 				F5F56D7A182A0A0C009B230C /* CollapseClick.m in Sources */,
 				F5CC294418236B7500D9CAE6 /* OABriefListCell.m in Sources */,
 				F5F77C6D1817B94F00B7CA73 /* REFrostedViewController.m in Sources */,
