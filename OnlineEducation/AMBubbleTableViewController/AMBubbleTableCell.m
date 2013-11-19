@@ -110,7 +110,7 @@
 						  andText:params[@"text"]];
         
         [self setupCellAttachment:type
-                             andPath:@"attachment"];
+                             andPath:@"girl"];
 	}
 	
 	if (type == AMBubbleCellReceived) {
