@@ -8,7 +8,9 @@
 
 #import "AMBubbleTableCell.h"
 #import "AMBubbleAccessoryView.h"
+#import "TGRImageViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "AMBubbleTableViewController.h"
 
 @interface AMBubbleTableCell ()
 
@@ -208,12 +210,16 @@
 	}
     
     // attachment image
-    [self.cellAttachment setBackgroundImage:[UIImage imageNamed:path] forState:UIControlStateNormal];
+    [self.cellAttachment setImage:[UIImage imageNamed:path] forState:UIControlStateNormal];
 }
 
 - (void)attachmentClick
 {
+    TGRImageViewController *viewController = [[TGRImageViewController alloc] initWithImage:[self.cellAttachment imageForState:UIControlStateNormal]];
+    viewController.transitioningDelegate = (AMBubbleTableViewController*)(self.tableController);
+    viewController.imageView.contentMode = UIViewContentModeScaleAspectFill;
     
+    [self.tableController presentViewController:viewController animated:YES completion:nil];
 }
 
 

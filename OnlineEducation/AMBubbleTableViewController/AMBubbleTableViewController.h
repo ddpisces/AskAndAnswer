@@ -8,7 +8,7 @@
 
 #import "AMBubbleGlobals.h"
 
-@interface AMBubbleTableViewController : UIViewController
+@interface AMBubbleTableViewController : UIViewController <UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, strong) UITableView*	tableView;
 

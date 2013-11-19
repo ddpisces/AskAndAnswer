@@ -8,6 +8,8 @@
 
 #import "AMBubbleTableViewController.h"
 #import "AMBubbleTableCell.h"
+#import "TGRImageViewController.h"
+#import "TGRImageZoomAnimationController.h"
 
 #define kInputHeight 40.0f
 #define kLineHeight 30.0f
@@ -217,6 +219,9 @@
 											cell.contentView.frame.origin.y,
 											self.tableView.frame.size.width,
 											cell.contentView.frame.size.height);
+        
+        // user click attachment, enlarge the image
+        cell.tableController = self;
 
 		if ([self.options[AMOptionsBubbleSwipeEnabled] boolValue]) {
 			UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeGesture:)];
@@ -524,6 +529,22 @@
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
 	[self.tableView reloadData];
+}
+
+#pragma mark - UIViewControllerTransitioningDelegate methods
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    if ([presented isKindOfClass:TGRImageViewController.class]) {
+        return [[TGRImageZoomAnimationController alloc] initWithReferenceImageView:((TGRImageViewController*)presented).imageView];
+    }
+    return nil;
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    if ([dismissed isKindOfClass:TGRImageViewController.class]) {
+        return [[TGRImageZoomAnimationController alloc] initWithReferenceImageView:((TGRImageViewController*)dismissed).imageView];
+    }
+    return nil;
 }
 
 @end

@@ -10,6 +10,8 @@
 
 @interface AMBubbleTableCell : UITableViewCell
 
+@property (nonatomic, weak)   UIViewController *tableController;
+
 - (id)initWithOptions:(NSDictionary*)options reuseIdentifier:(NSString *)reuseIdentifier;
 - (void)setupCellWithType:(AMBubbleCellType)type withWidth:(float)width andParams:(NSDictionary*)params;
 - (void)setupCellAttachment:(AMBubbleCellType)type andPath:(NSString*)path;

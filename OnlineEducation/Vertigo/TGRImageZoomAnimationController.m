@@ -28,7 +28,7 @@
 
 - (id)initWithReferenceImageView:(UIImageView *)referenceImageView {
     if (self = [super init]) {
-        NSAssert(referenceImageView.contentMode == UIViewContentModeScaleAspectFill, @"*** referenceImageView must have a UIViewContentModeScaleAspectFill contentMode!");
+//        NSAssert(referenceImageView.contentMode == UIViewContentModeScaleAspectFill, @"*** referenceImageView must have a UIViewContentModeScaleAspectFill contentMode!");
         _referenceImageView = referenceImageView;
     }
     return self;

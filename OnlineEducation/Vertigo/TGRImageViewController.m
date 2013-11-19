@@ -34,6 +34,7 @@
 - (id)initWithImage:(UIImage *)image {
     if (self = [super init]) {
         _image = image;
+        self.imageView.image = self.image;
     }
     
     return self;
