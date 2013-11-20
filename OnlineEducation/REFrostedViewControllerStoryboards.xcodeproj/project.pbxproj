@@ -24,6 +24,8 @@
 		3032B8E71805A26500064F85 /* DEMONavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8E61805A26500064F85 /* DEMONavigationController.m */; };
 		3032B8EA1805A4BF00064F85 /* DEMOSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8E91805A4BF00064F85 /* DEMOSecondViewController.m */; };
 		3032B8FD1805AB5600064F85 /* avatar@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3032B8FC1805AB5600064F85 /* avatar@2x.jpg */; };
+		F598F045183CA953000D4837 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = F598F044183CA953000D4837 /* Question.m */; };
+		F598F048183CA953000D4837 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = F598F047183CA953000D4837 /* Course.m */; };
 		F5CC2915182113D300D9CAE6 /* AMBubbleAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CC28E9182113D300D9CAE6 /* AMBubbleAccessoryView.m */; };
 		F5CC2916182113D300D9CAE6 /* AMBubbleFlatAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CC28EB182113D300D9CAE6 /* AMBubbleFlatAccessoryView.m */; };
 		F5CC2917182113D300D9CAE6 /* AMBubbleGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CC28ED182113D300D9CAE6 /* AMBubbleGlobals.m */; };
@@ -129,6 +131,10 @@
 		3032B8E81805A4BF00064F85 /* DEMOSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOSecondViewController.h; sourceTree = "<group>"; };
 		3032B8E91805A4BF00064F85 /* DEMOSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOSecondViewController.m; sourceTree = "<group>"; };
 		3032B8FC1805AB5600064F85 /* avatar@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "avatar@2x.jpg"; sourceTree = "<group>"; };
+		F598F043183CA953000D4837 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Question.h; path = REFrostedViewControllerStoryboards/Question.h; sourceTree = "<group>"; };
+		F598F044183CA953000D4837 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Question.m; path = REFrostedViewControllerStoryboards/Question.m; sourceTree = "<group>"; };
+		F598F046183CA953000D4837 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Course.h; path = REFrostedViewControllerStoryboards/Course.h; sourceTree = "<group>"; };
+		F598F047183CA953000D4837 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Course.m; path = REFrostedViewControllerStoryboards/Course.m; sourceTree = "<group>"; };
 		F5CC28E8182113D300D9CAE6 /* AMBubbleAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBubbleAccessoryView.h; sourceTree = "<group>"; };
 		F5CC28E9182113D300D9CAE6 /* AMBubbleAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBubbleAccessoryView.m; sourceTree = "<group>"; };
 		F5CC28EA182113D300D9CAE6 /* AMBubbleFlatAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBubbleFlatAccessoryView.h; sourceTree = "<group>"; };
@@ -253,6 +259,7 @@
 		3032B8861805A10100064F85 = {
 			isa = PBXGroup;
 			children = (
+				F598F03C183CA861000D4837 /* DataEngine */,
 				F5F56EEC183B121A009B230C /* Vertigo */,
 				F5F56D72182A0A0C009B230C /* CollapseClick */,
 				F5CC28E7182113D300D9CAE6 /* AMBubbleTableViewController */,
@@ -295,7 +302,6 @@
 				3032B8A41805A10100064F85 /* Main.storyboard */,
 				3032B8AA1805A10100064F85 /* Images.xcassets */,
 				3032B8991805A10100064F85 /* Supporting Files */,
-				F5F56F44183C5E33009B230C /* oaquestion.xcdatamodeld */,
 			);
 			path = REFrostedViewControllerStoryboards;
 			sourceTree = "<group>";
@@ -340,6 +346,18 @@
 				F5F77C7C18190DA600B7CA73 /* OAFillQuestionViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F598F03C183CA861000D4837 /* DataEngine */ = {
+			isa = PBXGroup;
+			children = (
+				F5F56F44183C5E33009B230C /* oaquestion.xcdatamodeld */,
+				F598F046183CA953000D4837 /* Course.h */,
+				F598F047183CA953000D4837 /* Course.m */,
+				F598F043183CA953000D4837 /* Question.h */,
+				F598F044183CA953000D4837 /* Question.m */,
+			);
+			name = DataEngine;
 			sourceTree = "<group>";
 		};
 		F5CC28E7182113D300D9CAE6 /* AMBubbleTableViewController */ = {
@@ -607,6 +625,7 @@
 				F5F56EF7183B121A009B230C /* UIImage+AspectFit.m in Sources */,
 				3032B8A91805A10100064F85 /* DEMORootViewController.m in Sources */,
 				F5F56E9E182B72EA009B230C /* OARegistrationView.m in Sources */,
+				F598F045183CA953000D4837 /* Question.m in Sources */,
 				F5F77C7A1818FA8700B7CA73 /* OACourseListViewController.m in Sources */,
 				F5CC2915182113D300D9CAE6 /* AMBubbleAccessoryView.m in Sources */,
 				3032B8EA1805A4BF00064F85 /* DEMOSecondViewController.m in Sources */,
@@ -626,6 +645,7 @@
 				F5F56D7B182A0A0C009B230C /* CollapseClickArrow.m in Sources */,
 				F5F77C6B1817B94F00B7CA73 /* RECommonFunctions.m in Sources */,
 				F5F56EF6183B121A009B230C /* TGRImageZoomAnimationController.m in Sources */,
+				F598F048183CA953000D4837 /* Course.m in Sources */,
 				F5F56D7A182A0A0C009B230C /* CollapseClick.m in Sources */,
 				F5CC294418236B7500D9CAE6 /* OABriefListCell.m in Sources */,
 				F5F77C6D1817B94F00B7CA73 /* REFrostedViewController.m in Sources */,
@@ -857,7 +877,8 @@
 				F5F56F45183C5E33009B230C /* oaquestion.xcdatamodel */,
 			);
 			currentVersion = F5F56F45183C5E33009B230C /* oaquestion.xcdatamodel */;
-			path = oaquestion.xcdatamodeld;
+			name = oaquestion.xcdatamodeld;
+			path = REFrostedViewControllerStoryboards/oaquestion.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
