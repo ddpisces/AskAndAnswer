@@ -11,4 +11,6 @@
 
 @interface DEMORootViewController : REFrostedViewController
 
+@property (nonatomic, weak) NSManagedObjectContext *managedObjectContext;
+
 @end

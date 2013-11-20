@@ -10,9 +10,8 @@
         <attribute name="quest" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="theCourse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="questions" inverseEntity="Course" syncable="YES"/>
     </entity>
-    <fetchRequest name="FetchRequest" entity="Course"/>
     <elements>
-        <element name="Course" positionX="135" positionY="179" width="128" height="73"/>
-        <element name="Question" positionX="-117" positionY="83" width="128" height="103"/>
+        <element name="Course" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Question" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>
