@@ -78,6 +78,8 @@
 		F5F56EF5183B121A009B230C /* TGRImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5F56EEF183B121A009B230C /* TGRImageViewController.xib */; };
 		F5F56EF6183B121A009B230C /* TGRImageZoomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F56EF1183B121A009B230C /* TGRImageZoomAnimationController.m */; };
 		F5F56EF7183B121A009B230C /* UIImage+AspectFit.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F56EF3183B121A009B230C /* UIImage+AspectFit.m */; };
+		F5F56F43183C5DC9009B230C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F56F42183C5DC9009B230C /* CoreData.framework */; };
+		F5F56F46183C5E33009B230C /* oaquestion.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5F56F44183C5E33009B230C /* oaquestion.xcdatamodeld */; };
 		F5F77C6B1817B94F00B7CA73 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C601817B94F00B7CA73 /* RECommonFunctions.m */; };
 		F5F77C6C1817B94F00B7CA73 /* REFrostedContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C621817B94F00B7CA73 /* REFrostedContainerViewController.m */; };
 		F5F77C6D1817B94F00B7CA73 /* REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F77C641817B94F00B7CA73 /* REFrostedViewController.m */; };
@@ -197,6 +199,8 @@
 		F5F56EF1183B121A009B230C /* TGRImageZoomAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRImageZoomAnimationController.m; sourceTree = "<group>"; };
 		F5F56EF2183B121A009B230C /* UIImage+AspectFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AspectFit.h"; sourceTree = "<group>"; };
 		F5F56EF3183B121A009B230C /* UIImage+AspectFit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AspectFit.m"; sourceTree = "<group>"; };
+		F5F56F42183C5DC9009B230C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F5F56F45183C5E33009B230C /* oaquestion.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = oaquestion.xcdatamodel; sourceTree = "<group>"; };
 		F5F77C5F1817B94F00B7CA73 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		F5F77C601817B94F00B7CA73 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		F5F77C611817B94F00B7CA73 /* REFrostedContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REFrostedContainerViewController.h; sourceTree = "<group>"; };
@@ -226,6 +230,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5F56F43183C5DC9009B230C /* CoreData.framework in Frameworks */,
 				3032B8951805A10100064F85 /* CoreGraphics.framework in Frameworks */,
 				3032B8971805A10100064F85 /* UIKit.framework in Frameworks */,
 				3032B8931805A10100064F85 /* Foundation.framework in Frameworks */,
@@ -271,6 +276,7 @@
 		3032B8911805A10100064F85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F5F56F42183C5DC9009B230C /* CoreData.framework */,
 				3032B8921805A10100064F85 /* Foundation.framework */,
 				3032B8941805A10100064F85 /* CoreGraphics.framework */,
 				3032B8961805A10100064F85 /* UIKit.framework */,
@@ -289,6 +295,7 @@
 				3032B8A41805A10100064F85 /* Main.storyboard */,
 				3032B8AA1805A10100064F85 /* Images.xcassets */,
 				3032B8991805A10100064F85 /* Supporting Files */,
+				F5F56F44183C5E33009B230C /* oaquestion.xcdatamodeld */,
 			);
 			path = REFrostedViewControllerStoryboards;
 			sourceTree = "<group>";
@@ -609,6 +616,7 @@
 				3032B8D11805A1D200064F85 /* DEMOMenuViewController.m in Sources */,
 				F5F56D7C182A0A0C009B230C /* CollapseClickCell.m in Sources */,
 				3032B8A31805A10100064F85 /* DEMOAppDelegate.m in Sources */,
+				F5F56F46183C5E33009B230C /* oaquestion.xcdatamodeld in Sources */,
 				F5CC2919182113D300D9CAE6 /* AMBubbleTableViewController.m in Sources */,
 				F5CC2917182113D300D9CAE6 /* AMBubbleGlobals.m in Sources */,
 				F5F77C6F1817B94F00B7CA73 /* UIView+REFrostedViewController.m in Sources */,
@@ -841,6 +849,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F5F56F44183C5E33009B230C /* oaquestion.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F5F56F45183C5E33009B230C /* oaquestion.xcdatamodel */,
+			);
+			currentVersion = F5F56F45183C5E33009B230C /* oaquestion.xcdatamodel */;
+			path = oaquestion.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3032B8871805A10100064F85 /* Project object */;
 }
