@@ -22,6 +22,8 @@
     // create dummy data
 //    [self initDummyData];
     
+//    [self fetchTest];
+    
     self.contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"contentController"];
     self.menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuController"];
 }
@@ -353,6 +355,18 @@
     } else {
         NSLog(@"Failed to save the context. Error = %@", savingError);
     }
+}
+
+- (void)fetchTest
+{
+    DEMOAppDelegate * appDelegate = [[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = [appDelegate managedObjectContext];
+    
+    NSManagedObjectModel* model = [[self.managedObjectContext persistentStoreCoordinator] managedObjectModel];
+    NSFetchRequest* request = [model fetchRequestFromTemplateWithName:@"FetchCourse"
+                                                substitutionVariables:@{@"COURSE" : @"英语"}];
+    NSError* error = nil;
+    NSArray* results = [self.managedObjectContext executeFetchRequest:request error:&error];
 }
 
 @end

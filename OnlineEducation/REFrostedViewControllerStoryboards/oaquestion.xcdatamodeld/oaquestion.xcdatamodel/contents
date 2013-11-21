@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12E55" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3400" systemVersion="13A603" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Course" representedClassName="Course" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Question" inverseName="theCourse" inverseEntity="Question" syncable="YES"/>
@@ -10,6 +10,7 @@
         <attribute name="quest" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="theCourse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="questions" inverseEntity="Course" syncable="YES"/>
     </entity>
+    <fetchRequest name="FetchCourse" entity="Course" predicateString="name == $COURSE"/>
     <elements>
         <element name="Course" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Question" positionX="0" positionY="0" width="0" height="0"/>
