@@ -21,11 +21,6 @@ typedef enum {
 } AMBubbleCellType;
 
 typedef enum {
-    AMHasImage,
-    AMNOImage
-} AMBubbleHasImage;
-
-typedef enum {
 	AMBubbleAccessoryUp,
 	AMBubbleAccessoryDown
 } AMBubbleAccessoryPosition;

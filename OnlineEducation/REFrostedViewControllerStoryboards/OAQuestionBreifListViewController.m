@@ -13,7 +13,6 @@
 
 @interface OAQuestionBreifListViewController ()
 
-@property (nonatomic, strong) NSMutableArray* data;
 @property (nonatomic, strong) NSArray *questionData;
 
 @end
@@ -37,9 +36,6 @@
 
     // remove table cell seperator
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    // Dummy data
-	self.data = [[OADataEngine sharedInstance] getQuestionsItems:_selectedCourse];
     
     self.questionData = [[OADataEngine sharedInstance] getQuestionsByCourse:self.selectedCourse];
 }
@@ -75,26 +71,10 @@
     [cell.lblQuestion setText:currentQuest.quest];
     [cell.lblAnswer setText:currentQuest.answer];
     
-//    // if question raised by student containting image
-//    AMBubbleHasImage hasImage;
-//    if ([[self.data objectAtIndex:i] objectAtIndex:0][@"hasImage"]) {
-//        hasImage = [[[self.data objectAtIndex:i] objectAtIndex:0][@"hasImage"] intValue];
-//    } else {
-//        hasImage = AMNOImage;
-//    }
-    
-//    // if question asked by teacher containing image
-//    AMBubbleHasImage hasImage2;
-//    if ([[self.data objectAtIndex:i] objectAtIndex:1][@"hasImage"]) {
-//        hasImage2 = [[[self.data objectAtIndex:i] objectAtIndex:1][@"hasImage"] intValue];
-//    } else {
-//        hasImage2 = AMNOImage;
-//    }
-    
-//    // set has image icon on brief list
-//    if ((hasImage == AMHasImage) || (hasImage2 == AMHasImage)) {
-//        [cell.imgAttach setImage:[UIImage imageNamed:@"attachment.png"]];
-//    }
+    // display attachment logo if it contains attachment
+    if (currentQuest.attachment) {
+        [cell.imgAttach setImage:[UIImage imageNamed:@"attachment.png"]];
+    }
     
     return cell;
 }
