@@ -9,10 +9,12 @@
 #import "OAQuestionBreifListViewController.h"
 #import "OAQuestionDetailViewController.h"
 #import "OABriefListCell.h"
+#import "Question.h"
 
 @interface OAQuestionBreifListViewController ()
 
 @property (nonatomic, strong) NSMutableArray* data;
+@property (nonatomic, strong) NSArray *questionData;
 
 @end
 
@@ -38,6 +40,8 @@
     
     // Dummy data
 	self.data = [[OADataEngine sharedInstance] getQuestionsItems:_selectedCourse];
+    
+    self.questionData = [[OADataEngine sharedInstance] getQuestionsByCourse:self.selectedCourse];
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,40 +61,40 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.(question + answer)
-    return [self.data count];
+    return [self.questionData count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     OABriefListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OAQuestion" forIndexPath:indexPath];
     
-    // Configure the cell...
-    int i = indexPath.row;
+    // current question
+    Question *currentQuest = [self.questionData objectAtIndex:indexPath.row];
     
     //label show question and answer
-    [cell.lblQuestion setText:[[self.data objectAtIndex:i] objectAtIndex:0][@"text"]];
-    [cell.lblAnswer setText:[[self.data objectAtIndex:i] objectAtIndex:1][@"text"]];
+    [cell.lblQuestion setText:currentQuest.quest];
+    [cell.lblAnswer setText:currentQuest.answer];
     
-    // if question raised by student containting image
-    AMBubbleHasImage hasImage;
-    if ([[self.data objectAtIndex:i] objectAtIndex:0][@"hasImage"]) {
-        hasImage = [[[self.data objectAtIndex:i] objectAtIndex:0][@"hasImage"] intValue];
-    } else {
-        hasImage = AMNOImage;
-    }
+//    // if question raised by student containting image
+//    AMBubbleHasImage hasImage;
+//    if ([[self.data objectAtIndex:i] objectAtIndex:0][@"hasImage"]) {
+//        hasImage = [[[self.data objectAtIndex:i] objectAtIndex:0][@"hasImage"] intValue];
+//    } else {
+//        hasImage = AMNOImage;
+//    }
     
-    // if question asked by teacher containing image
-    AMBubbleHasImage hasImage2;
-    if ([[self.data objectAtIndex:i] objectAtIndex:1][@"hasImage"]) {
-        hasImage2 = [[[self.data objectAtIndex:i] objectAtIndex:1][@"hasImage"] intValue];
-    } else {
-        hasImage2 = AMNOImage;
-    }
+//    // if question asked by teacher containing image
+//    AMBubbleHasImage hasImage2;
+//    if ([[self.data objectAtIndex:i] objectAtIndex:1][@"hasImage"]) {
+//        hasImage2 = [[[self.data objectAtIndex:i] objectAtIndex:1][@"hasImage"] intValue];
+//    } else {
+//        hasImage2 = AMNOImage;
+//    }
     
-    // set has image icon on brief list
-    if ((hasImage == AMHasImage) || (hasImage2 == AMHasImage)) {
-        [cell.imgAttach setImage:[UIImage imageNamed:@"attachment.png"]];
-    }
+//    // set has image icon on brief list
+//    if ((hasImage == AMHasImage) || (hasImage2 == AMHasImage)) {
+//        [cell.imgAttach setImage:[UIImage imageNamed:@"attachment.png"]];
+//    }
     
     return cell;
 }

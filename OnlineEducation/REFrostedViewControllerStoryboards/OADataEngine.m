@@ -6,8 +6,11 @@
 //  Copyright (c) 2013 Roman Efimov. All rights reserved.
 //
 
+#import <CoreData/CoreData.h>
 #import "OADataEngine.h"
 #import "AMBubbleGlobals.h"
+#import "DEMOAppDelegate.h"
+#import "Course.h"
 
 static OADataEngine *sharedEngine = nil;
 
@@ -32,6 +35,10 @@ static OADataEngine *sharedEngine = nil;
 
 -(void)initDummyData
 {
+    // init core data context
+    DEMOAppDelegate * appDelegate = [[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = [appDelegate managedObjectContext];
+    
     // Chinese
     data_chinese = [[NSMutableArray alloc] initWithArray:@[@[
                                                                @{
@@ -513,9 +520,44 @@ static OADataEngine *sharedEngine = nil;
     return data_chinese;
 }
 
-- (void)addQuestion:(NSDictionary *)myQuestion theCourse:(MyCourse)course
+- (NSString *)getCourseName:(MyCourse)course
 {
+    switch (course) {
+        case OAChinese:
+            return @"语文";
+            
+        case OAEnglish:
+            return @"英语";
+            
+        case OAMath:
+            return @"数学";
+            
+        case OAChemistry:
+            return @"化学";
+            
+        case OAHistory:
+            return @"历史";
+            
+        case OAPysics:
+            return @"物理";
+            
+        default:
+            break;
+    }
+}
+
+- (NSArray *)getQuestionsByCourse:(MyCourse)course
+{
+    NSManagedObjectModel* model = [[self.managedObjectContext persistentStoreCoordinator] managedObjectModel];
+    NSFetchRequest* request = [model fetchRequestFromTemplateWithName:@"FetchCourse"
+                                                substitutionVariables:@{@"COURSE" : [self getCourseName:course]}];
+    NSError* error = nil;
+    NSArray* results = [self.managedObjectContext executeFetchRequest:request error:&error];
     
+    Course *currentCourse = [results objectAtIndex:0];
+    NSLog(@"course name: %@", currentCourse.name);
+    
+    return [[currentCourse questions] allObjects];
 }
 
 @end

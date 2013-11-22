@@ -19,9 +19,11 @@ typedef enum {
 
 @interface OADataEngine : NSObject
 
+@property (nonatomic, weak) NSManagedObjectContext *managedObjectContext;
+
 + (OADataEngine *)sharedInstance;
 - (void)initDummyData;
 - (NSMutableArray *)getQuestionsItems:(MyCourse)course;
-- (void)addQuestion:(NSDictionary *)myQuestion theCourse:(MyCourse)course;
+- (NSArray *)getQuestionsByCourse:(MyCourse)course;
 
 @end
