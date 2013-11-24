@@ -10,6 +10,7 @@
 #import "OAQuestionDetailViewController.h"
 #import "OABriefListCell.h"
 #import "Question.h"
+#import "QuesItem.h"
 
 @interface OAQuestionBreifListViewController ()
 
@@ -64,15 +65,22 @@
 {
     OABriefListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OAQuestion" forIndexPath:indexPath];
     
-    // current question
+    // brief question only show first pair
     Question *currentQuest = [self.questionData objectAtIndex:indexPath.row];
+    NSArray *questions = [currentQuest.items allObjects];
+    QuesItem *firstQuestion = [questions objectAtIndex:0];
+    QuesItem *firstAnswer = [questions objectAtIndex:1];
     
     //label show question and answer
-    [cell.lblQuestion setText:currentQuest.quest];
-    [cell.lblAnswer setText:currentQuest.answer];
+    [cell.lblQuestion setText:firstQuestion.text];
+    
+    // only has question, no answer
+    if (firstAnswer) {
+        [cell.lblAnswer setText:firstAnswer.text];
+    }
     
     // display attachment logo if it contains attachment
-    if (currentQuest.attachment) {
+    if (firstQuestion.attachment || firstAnswer.attachment) {
         [cell.imgAttach setImage:[UIImage imageNamed:@"attachment.png"]];
     }
     

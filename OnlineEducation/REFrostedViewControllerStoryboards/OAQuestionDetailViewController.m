@@ -40,7 +40,7 @@
     
     self.currentQuestion = [[OADataEngine sharedInstance] getCurrentSelectedQuestion:self.selectedCourse theQuestion:self.selectedQuestion];
     
-    NSLog(@"Current question:%@, answer:%@", self.currentQuestion.quest, self.currentQuestion.answer);
+//    NSLog(@"Current question:%@, answer:%@", self.currentQuestion.quest, self.currentQuestion.answer);
 
     // Set a style
 	[self setTableStyle:AMBubbleTableStyleFlat];

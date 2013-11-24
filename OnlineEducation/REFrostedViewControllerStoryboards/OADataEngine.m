@@ -561,9 +561,9 @@ static OADataEngine *sharedEngine = nil;
 
 - (Question *)getCurrentSelectedQuestion:(MyCourse)course theQuestion:(NSInteger)question
 {
-    NSArray *courses = [self getQuestionsByCourse:course];
+    NSArray *questions = [self getQuestionsByCourse:course];
     
-    return [courses objectAtIndex:question];
+    return [questions objectAtIndex:question];
 }
 
 @end
