@@ -2,8 +2,8 @@
 //  Course.h
 //  REFrostedViewControllerStoryboards
 //
-//  Created by zz cienet on 11/20/13.
-//  Copyright (c) 2013 Roman Efimov. All rights reserved.
+//  Created by dupeng on 13-11-24.
+//  Copyright (c) 2013年 Roman Efimov. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

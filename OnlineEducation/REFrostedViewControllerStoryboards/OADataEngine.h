@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Question.h"
 
 typedef enum {
 	OAChinese,
@@ -25,5 +26,6 @@ typedef enum {
 - (void)initDummyData;
 - (NSMutableArray *)getQuestionsItems:(MyCourse)course;
 - (NSArray *)getQuestionsByCourse:(MyCourse)course;
+- (Question *)getCurrentSelectedQuestion:(MyCourse)course theQuestion:(NSInteger)question;
 
 @end

@@ -8,10 +8,12 @@
 
 #import "OAQuestionDetailViewController.h"
 #import "OADataEngine.h"
+#import "Question.h"
 
 @interface OAQuestionDetailViewController () <AMBubbleTableDataSource, AMBubbleTableDelegate>
 
 @property (nonatomic, strong) NSMutableArray* data;
+@property (nonatomic, strong) Question *currentQuestion;
 
 @end
 
@@ -35,6 +37,10 @@
 	
     // Dummy data
 	self.data = [[OADataEngine sharedInstance] getQuestionsItems:self.selectedCourse][self.selectedQuestion];
+    
+    self.currentQuestion = [[OADataEngine sharedInstance] getCurrentSelectedQuestion:self.selectedCourse theQuestion:self.selectedQuestion];
+    
+    NSLog(@"Current question:%@, answer:%@", self.currentQuestion.quest, self.currentQuestion.answer);
 
     // Set a style
 	[self setTableStyle:AMBubbleTableStyleFlat];
@@ -45,7 +51,7 @@
 
 - (NSInteger)numberOfRows
 {
-    return self.data.count;
+    return 2;
 }
 
 - (AMBubbleCellType)cellTypeForRowAtIndexPath:(NSIndexPath *)indexPath

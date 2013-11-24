@@ -2,8 +2,8 @@
 //  Question.h
 //  REFrostedViewControllerStoryboards
 //
-//  Created by zz cienet on 11/20/13.
-//  Copyright (c) 2013 Roman Efimov. All rights reserved.
+//  Created by dupeng on 13-11-24.
+//  Copyright (c) 2013年 Roman Efimov. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,9 +13,15 @@
 
 @interface Question : NSManagedObject
 
-@property (nonatomic, retain) NSString * answer;
-@property (nonatomic, retain) NSData * attachment;
-@property (nonatomic, retain) NSString * quest;
 @property (nonatomic, retain) Course *theCourse;
+@property (nonatomic, retain) NSSet *items;
+@end
+
+@interface Question (CoreDataGeneratedAccessors)
+
+- (void)addItemsObject:(NSManagedObject *)value;
+- (void)removeItemsObject:(NSManagedObject *)value;
+- (void)addItems:(NSSet *)values;
+- (void)removeItems:(NSSet *)values;
 
 @end

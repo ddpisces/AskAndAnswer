@@ -4,15 +4,21 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Question" inverseName="theCourse" inverseEntity="Question" syncable="YES"/>
     </entity>
-    <entity name="Question" representedClassName="Question" syncable="YES">
-        <attribute name="answer" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="QuesItem" representedClassName="QuesItem" syncable="YES">
         <attribute name="attachment" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="quest" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="theQuestion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Question" inverseName="items" inverseEntity="Question" syncable="YES"/>
+    </entity>
+    <entity name="Question" representedClassName="Question" syncable="YES">
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="QuesItem" inverseName="theQuestion" inverseEntity="QuesItem" syncable="YES"/>
         <relationship name="theCourse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="questions" inverseEntity="Course" syncable="YES"/>
     </entity>
     <fetchRequest name="FetchCourse" entity="Course" predicateString="name == $COURSE"/>
     <elements>
-        <element name="Course" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Question" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Course" positionX="0" positionY="0" width="128" height="75"/>
+        <element name="Question" positionX="-225" positionY="117" width="117" height="73"/>
+        <element name="QuesItem" positionX="-441" positionY="162" width="128" height="118"/>
     </elements>
 </model>
