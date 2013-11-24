@@ -8,6 +8,7 @@
 
 #import "Question.h"
 #import "Course.h"
+#import "QuesItem.h"
 
 
 @implementation Question

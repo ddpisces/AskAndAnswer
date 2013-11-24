@@ -24,9 +24,9 @@
 		3032B8E71805A26500064F85 /* DEMONavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8E61805A26500064F85 /* DEMONavigationController.m */; };
 		3032B8EA1805A4BF00064F85 /* DEMOSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8E91805A4BF00064F85 /* DEMOSecondViewController.m */; };
 		3032B8FD1805AB5600064F85 /* avatar@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3032B8FC1805AB5600064F85 /* avatar@2x.jpg */; };
-		B83E78201841D4E600C91CFA /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E781F1841D4E600C91CFA /* Question.m */; };
 		B83E78231841D4E700C91CFA /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E78221841D4E700C91CFA /* Course.m */; };
 		B83E78261841D4E700C91CFA /* QuesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E78251841D4E700C91CFA /* QuesItem.m */; };
+		B83E78291841DA1500C91CFA /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E78281841DA1500C91CFA /* Question.m */; };
 		F5CC2915182113D300D9CAE6 /* AMBubbleAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CC28E9182113D300D9CAE6 /* AMBubbleAccessoryView.m */; };
 		F5CC2916182113D300D9CAE6 /* AMBubbleFlatAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CC28EB182113D300D9CAE6 /* AMBubbleFlatAccessoryView.m */; };
 		F5CC2917182113D300D9CAE6 /* AMBubbleGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CC28ED182113D300D9CAE6 /* AMBubbleGlobals.m */; };
@@ -132,12 +132,12 @@
 		3032B8E81805A4BF00064F85 /* DEMOSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOSecondViewController.h; sourceTree = "<group>"; };
 		3032B8E91805A4BF00064F85 /* DEMOSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOSecondViewController.m; sourceTree = "<group>"; };
 		3032B8FC1805AB5600064F85 /* avatar@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "avatar@2x.jpg"; sourceTree = "<group>"; };
-		B83E781E1841D4E600C91CFA /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Question.h; path = REFrostedViewControllerStoryboards/Question.h; sourceTree = "<group>"; };
-		B83E781F1841D4E600C91CFA /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Question.m; path = REFrostedViewControllerStoryboards/Question.m; sourceTree = "<group>"; };
 		B83E78211841D4E700C91CFA /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Course.h; path = REFrostedViewControllerStoryboards/Course.h; sourceTree = "<group>"; };
 		B83E78221841D4E700C91CFA /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Course.m; path = REFrostedViewControllerStoryboards/Course.m; sourceTree = "<group>"; };
 		B83E78241841D4E700C91CFA /* QuesItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuesItem.h; path = REFrostedViewControllerStoryboards/QuesItem.h; sourceTree = "<group>"; };
 		B83E78251841D4E700C91CFA /* QuesItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuesItem.m; path = REFrostedViewControllerStoryboards/QuesItem.m; sourceTree = "<group>"; };
+		B83E78271841DA1500C91CFA /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Question.h; path = REFrostedViewControllerStoryboards/Question.h; sourceTree = "<group>"; };
+		B83E78281841DA1500C91CFA /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Question.m; path = REFrostedViewControllerStoryboards/Question.m; sourceTree = "<group>"; };
 		F5CC28E8182113D300D9CAE6 /* AMBubbleAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBubbleAccessoryView.h; sourceTree = "<group>"; };
 		F5CC28E9182113D300D9CAE6 /* AMBubbleAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBubbleAccessoryView.m; sourceTree = "<group>"; };
 		F5CC28EA182113D300D9CAE6 /* AMBubbleFlatAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBubbleFlatAccessoryView.h; sourceTree = "<group>"; };
@@ -353,12 +353,12 @@
 			isa = PBXGroup;
 			children = (
 				F5F56F44183C5E33009B230C /* oaquestion.xcdatamodeld */,
+				B83E78271841DA1500C91CFA /* Question.h */,
+				B83E78281841DA1500C91CFA /* Question.m */,
 				B83E78241841D4E700C91CFA /* QuesItem.h */,
 				B83E78251841D4E700C91CFA /* QuesItem.m */,
 				B83E78211841D4E700C91CFA /* Course.h */,
 				B83E78221841D4E700C91CFA /* Course.m */,
-				B83E781E1841D4E600C91CFA /* Question.h */,
-				B83E781F1841D4E600C91CFA /* Question.m */,
 				F5CC293F1822334000D9CAE6 /* OADataEngine.h */,
 				F5CC29401822334000D9CAE6 /* OADataEngine.m */,
 			);
@@ -629,8 +629,8 @@
 				3032B89F1805A10100064F85 /* main.m in Sources */,
 				F5F56EF7183B121A009B230C /* UIImage+AspectFit.m in Sources */,
 				3032B8A91805A10100064F85 /* DEMORootViewController.m in Sources */,
+				B83E78291841DA1500C91CFA /* Question.m in Sources */,
 				F5F56E9E182B72EA009B230C /* OARegistrationView.m in Sources */,
-				B83E78201841D4E600C91CFA /* Question.m in Sources */,
 				F5F77C7A1818FA8700B7CA73 /* OACourseListViewController.m in Sources */,
 				F5CC2915182113D300D9CAE6 /* AMBubbleAccessoryView.m in Sources */,
 				3032B8EA1805A4BF00064F85 /* DEMOSecondViewController.m in Sources */,

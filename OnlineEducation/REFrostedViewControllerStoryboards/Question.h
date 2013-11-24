@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Course;
+@class Course, QuesItem;
 
 @interface Question : NSManagedObject
 
@@ -19,8 +19,8 @@
 
 @interface Question (CoreDataGeneratedAccessors)
 
-- (void)addItemsObject:(NSManagedObject *)value;
-- (void)removeItemsObject:(NSManagedObject *)value;
+- (void)addItemsObject:(QuesItem *)value;
+- (void)removeItemsObject:(QuesItem *)value;
 - (void)addItems:(NSSet *)values;
 - (void)removeItems:(NSSet *)values;
 
