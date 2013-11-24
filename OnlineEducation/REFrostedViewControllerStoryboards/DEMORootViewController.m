@@ -217,6 +217,7 @@
     
     chinese_quest1_item2.text = @"【解析】通过描述秋日登高望远的所见所感，抒发自己渴望北伐而不得的虚度光阴的苦闷，也是对偏安一隅的南宋统治者的鞭苔。";
     chinese_quest1_item2.type = [NSNumber numberWithInt:AMBubbleCellReceived];
+    chinese_quest1_item2.date = [NSDate date];
 
     [chinese1 addItemsObject:chinese_quest1_item2];
     

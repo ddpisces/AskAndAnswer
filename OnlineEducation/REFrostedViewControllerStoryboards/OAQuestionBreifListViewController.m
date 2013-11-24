@@ -57,7 +57,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.(question + answer)
+    // Return the number of rows in the section.
     return [self.questionData count];
 }
 
@@ -67,7 +67,11 @@
     
     // brief question only show first pair
     Question *currentQuest = [self.questionData objectAtIndex:indexPath.row];
-    NSArray *questions = [currentQuest.items allObjects];
+    
+    // fetch item based on date
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
+    NSArray *questions = [currentQuest.items sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+    
     QuesItem *firstQuestion = [questions objectAtIndex:0];
     QuesItem *firstAnswer = [questions objectAtIndex:1];
     
