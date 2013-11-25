@@ -556,7 +556,9 @@ static OADataEngine *sharedEngine = nil;
     Course *currentCourse = [results objectAtIndex:0];
     NSLog(@"course name: %@", currentCourse.name);
     
-    return [[currentCourse questions] allObjects];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"items.@min.date" ascending:YES];
+    
+    return [[currentCourse questions] sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
 }
 
 - (Question *)getCurrentSelectedQuestion:(MyCourse)course theQuestion:(NSInteger)question
