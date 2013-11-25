@@ -23,7 +23,7 @@ typedef enum {
 @property (nonatomic, weak) NSManagedObjectContext *managedObjectContext;
 
 + (OADataEngine *)sharedInstance;
-- (void)initDummyData;
+- (void)initCoreData;
 - (NSMutableArray *)getQuestionsItems:(MyCourse)course;
 - (NSArray *)getQuestionsByCourse:(MyCourse)course;
 - (Question *)getCurrentSelectedQuestion:(MyCourse)course theQuestion:(NSInteger)question;
