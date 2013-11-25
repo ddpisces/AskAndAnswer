@@ -9,10 +9,11 @@
 #import "OAQuestionDetailViewController.h"
 #import "OADataEngine.h"
 #import "Question.h"
+#import "QuesItem.h"
 
 @interface OAQuestionDetailViewController () <AMBubbleTableDataSource, AMBubbleTableDelegate>
 
-@property (nonatomic, strong) NSMutableArray* data;
+@property (nonatomic, strong) NSArray* data;
 @property (nonatomic, strong) Question *currentQuestion;
 
 @end
@@ -36,9 +37,10 @@
     [self setDelegate:self];
 	
     // Dummy data
-	self.data = [[OADataEngine sharedInstance] getQuestionsItems:self.selectedCourse][self.selectedQuestion];
-    
     self.currentQuestion = [[OADataEngine sharedInstance] getCurrentSelectedQuestion:self.selectedCourse theQuestion:self.selectedQuestion];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
+    self.data = [self.currentQuestion.items sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     
 //    NSLog(@"Current question:%@, answer:%@", self.currentQuestion.quest, self.currentQuestion.answer);
 
@@ -51,27 +53,32 @@
 
 - (NSInteger)numberOfRows
 {
-    return 2;
+    return [self.data count];
 }
 
 - (AMBubbleCellType)cellTypeForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [self.data[indexPath.row][@"type"] intValue];
+    QuesItem *item = [self.data objectAtIndex:indexPath.row];
+    return [[item type] intValue];
 }
 
 - (NSString *)textForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return self.data[indexPath.row][@"text"];
+    QuesItem *item = [self.data objectAtIndex:indexPath.row];
+    return item.text;
 }
 
 - (NSDate *)timestampForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [NSDate date];
+    QuesItem *item = [self.data objectAtIndex:indexPath.row];
+    return [item date];
 }
 
 - (UIImage*)avatarForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row % 2 == 0) {
+    QuesItem *item = [self.data objectAtIndex:indexPath.row];
+    
+    if (AMBubbleCellSent == [item.type intValue]) {
         return [UIImage imageNamed:@"boy"];
     }
     else{
@@ -85,10 +92,10 @@
 {
     NSLog(@"User wrote: %@", text);
 	
-	[self.data addObject:@{ @"text": text,
-                            @"date": [NSDate date],
-                            @"type": @(AMBubbleCellSent)
-                            }];
+//	[self.data addObject:@{ @"text": text,
+//                            @"date": [NSDate date],
+//                            @"type": @(AMBubbleCellSent)
+//                            }];
 	
 	NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(self.data.count - 1) inSection:0];
 	[self.tableView beginUpdates];
