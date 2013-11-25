@@ -55,6 +55,10 @@
     english_quest1_item1.type = [NSNumber numberWithInt:AMBubbleCellSent];
     english_quest1_item1.date = [NSDate date];
     
+    UIImage *tempImage = [UIImage imageNamed:@"girl"];
+    NSData *imageData = [NSData dataWithData:UIImagePNGRepresentation(tempImage)];
+    english_quest1_item1.attachment = imageData;
+    
     [english1 addItemsObject:english_quest1_item1];
     
     QuesItem *english_quest1_item2 = [NSEntityDescription

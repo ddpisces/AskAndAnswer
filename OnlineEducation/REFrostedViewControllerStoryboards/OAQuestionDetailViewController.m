@@ -86,6 +86,14 @@
     }
 }
 
+- (UIImage*)attachmentForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    QuesItem *item = [self.data objectAtIndex:indexPath.row];
+    UIImage *image = [UIImage imageWithData:item.attachment];
+    
+    return image;
+}
+
 #pragma mark - AMBubbleTableDelegate
 
 - (void)didSendText:(NSString*)text
