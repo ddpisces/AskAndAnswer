@@ -109,8 +109,10 @@
 											 sizeText.height)
 						  andText:params[@"text"]];
         
-        [self setupCellAttachment:type
-                             andPath:@"girl"];
+        if ([params[@"attachment"] isKindOfClass:[UIImage class]])
+        {
+            [self setupCellAttachment:AMBubbleCellSent attached:params[@"attachment"]];
+        }
 	}
 	
 	if (type == AMBubbleCellReceived) {
@@ -160,8 +162,10 @@
 						textFrame:CGRectMake(22.0f, 4.0 + usernameSize.height, sizeText.width + 5.0f, sizeText.height)
 						  andText:params[@"text"]];
         
-        [self setupCellAttachment:type
-                          andPath:@"attachment"];
+        if ([params[@"attachment"] isKindOfClass:[UIImage class]])
+        {
+            [self setupCellAttachment:AMBubbleCellReceived attached:params[@"attachment"]];
+        }
 	}
 	
 	if (type == AMBubbleCellTimestamp) {
@@ -198,7 +202,7 @@
 	[self.labelText setText:text];
 }
 
-- (void)setupCellAttachment:(AMBubbleCellType)type andPath:(NSString*)path
+- (void)setupCellAttachment:(AMBubbleCellType)type attached:(UIImage *)image
 {
     if (type == AMBubbleCellReceived) {
         // attachment size
@@ -210,7 +214,7 @@
 	}
     
     // attachment image
-    [self.cellAttachment setImage:[UIImage imageNamed:path] forState:UIControlStateNormal];
+    [self.cellAttachment setImage:image forState:UIControlStateNormal];
 }
 
 - (void)attachmentClick

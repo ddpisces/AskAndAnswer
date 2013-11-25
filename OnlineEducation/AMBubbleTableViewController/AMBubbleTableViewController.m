@@ -199,8 +199,9 @@
 	NSDate* date = [self.dataSource timestampForRowAtIndexPath:indexPath];
 	AMBubbleTableCell* cell = [tableView dequeueReusableCellWithIdentifier:cellID];
 	
-	UIImage* avatar;
-	UIColor* color;
+	UIImage*    avatar;
+	UIColor*    color;
+    UIImage*    attachment;
 	
 	if ([self.dataSource respondsToSelector:@selector(usernameColorForRowAtIndexPath:)]) {
 		color = [self.dataSource usernameColorForRowAtIndexPath:indexPath];
@@ -208,8 +209,11 @@
 	if ([self.dataSource respondsToSelector:@selector(avatarForRowAtIndexPath:)]) {
 		avatar = [self.dataSource avatarForRowAtIndexPath:indexPath];
 	}
+    if ([self.dataSource respondsToSelector:@selector(attachmentForRowAtIndexPath:)]) {
+		attachment = [self.dataSource attachmentForRowAtIndexPath:indexPath];
+	}
+    
 
-	
 	if (cell == nil) {
 		cell = [[AMBubbleTableCell alloc] initWithOptions:self.options
 										  reuseIdentifier:cellID];
@@ -260,7 +264,8 @@
 		 @"index": @(indexPath.row),
 		 @"username": (username ? username : @""),
 		 @"avatar": (avatar ? avatar: @""),
-		 @"color": (color ? color: @"")
+		 @"color": (color ? color: @""),
+         @"attachment": (attachment ? attachment: @"")
 		 }];
 	}
 	

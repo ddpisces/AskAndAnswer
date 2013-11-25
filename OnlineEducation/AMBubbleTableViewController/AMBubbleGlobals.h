@@ -37,6 +37,7 @@ typedef enum {
 - (UIImage*)avatarForRowAtIndexPath:(NSIndexPath *)indexPath;
 - (NSString*)usernameForRowAtIndexPath:(NSIndexPath *)indexPath;
 - (UIColor*)usernameColorForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (UIImage*)attachmentForRowAtIndexPath:(NSIndexPath *)indexPath;
 @end
 
 @protocol AMBubbleTableDelegate <NSObject>
