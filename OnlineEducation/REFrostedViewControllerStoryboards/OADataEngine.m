@@ -40,34 +40,6 @@ static OADataEngine *sharedEngine = nil;
     self.managedObjectContext = [appDelegate managedObjectContext];
 }
 
--(NSMutableArray *)getQuestionsItems:(MyCourse)course
-{
-    switch (course) {
-        case OAChinese:
-            return data_chinese;
-            
-        case OAEnglish:
-            return data_english;
-            
-        case OAMath:
-            return data_math;
-        
-        case OAChemistry:
-            return data_chmistry;
-            
-        case OAHistory:
-            return data_history;
-            
-        case OAPysics:
-            return data_physics;
-            
-        default:
-            break;
-    }
-    
-    return data_chinese;
-}
-
 - (NSString *)getCourseName:(MyCourse)course
 {
     switch (course) {

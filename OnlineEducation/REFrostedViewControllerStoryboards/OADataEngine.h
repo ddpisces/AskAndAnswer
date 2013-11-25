@@ -24,7 +24,6 @@ typedef enum {
 
 + (OADataEngine *)sharedInstance;
 - (void)initCoreData;
-- (NSMutableArray *)getQuestionsItems:(MyCourse)course;
 - (NSArray *)getQuestionsByCourse:(MyCourse)course;
 - (Question *)getCurrentSelectedQuestion:(MyCourse)course theQuestion:(NSInteger)question;
 
