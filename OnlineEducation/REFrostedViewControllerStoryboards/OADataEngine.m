@@ -14,14 +14,7 @@
 
 static OADataEngine *sharedEngine = nil;
 
-@implementation OADataEngine{
-    NSMutableArray* data_chinese;
-    NSMutableArray* data_math;
-    NSMutableArray* data_english;
-    NSMutableArray* data_history;
-    NSMutableArray* data_chmistry;
-    NSMutableArray* data_physics;
-}
+@implementation OADataEngine
 
 +(OADataEngine *)sharedInstance{
     @synchronized(self) {
