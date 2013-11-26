@@ -26,5 +26,6 @@ typedef enum {
 - (void)initCoreData;
 - (NSArray *)getQuestionsByCourse:(MyCourse)course;
 - (Question *)getCurrentSelectedQuestion:(MyCourse)course theQuestion:(NSInteger)question;
+- (Course *)getCourseByName:(NSString *)name;
 
 @end

@@ -73,7 +73,12 @@
     NSArray *questions = [currentQuest.items sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     
     QuesItem *firstQuestion = [questions objectAtIndex:0];
-    QuesItem *firstAnswer = [questions objectAtIndex:1];
+    QuesItem *firstAnswer;
+    
+    if (questions.count > 1)
+    {
+      firstAnswer = [questions objectAtIndex:1];
+    }
     
     //label show question and answer
     [cell.lblQuestion setText:firstQuestion.text];
@@ -81,6 +86,9 @@
     // only has question, no answer
     if (firstAnswer) {
         [cell.lblAnswer setText:firstAnswer.text];
+    } else {
+        [cell.lblAnswer setText:@""];
+        cell.lblAnswer.backgroundColor = [UIColor clearColor];
     }
     
     // display attachment logo if it contains attachment

@@ -7,6 +7,12 @@
 //
 
 #import "OAFillQuestionViewController.h"
+#import "DEMOAppDelegate.h"
+#import "Question.h"
+#import "QuesItem.h"
+#import "AMBubbleGlobals.h"
+#import "Course.h"
+#import "OADataEngine.h"
 
 typedef enum {
     GRADE,
@@ -22,6 +28,10 @@ typedef enum {
     NSArray     *grades;
     CategorySelection studentSelection;
     UIImagePickerController *picker;
+    UIImage     *attachedImage;
+    
+    // core data
+    NSManagedObjectContext *managedObjectContext;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -54,6 +64,10 @@ typedef enum {
     // init data
     courses = [NSArray arrayWithObjects:@"语文",@"数学", @"英语", @"物理",@"化学",@"历史", nil];
     grades = [NSArray arrayWithObjects:@"小一",@"小二", @"小三", @"小四",@"小五",@"小六", @"初一", @"初二", @"初三",@"高一", @"高二", @"高三", nil];
+    
+    // core date context
+    DEMOAppDelegate * appDelegate = [[UIApplication sharedApplication] delegate];
+    managedObjectContext = [appDelegate managedObjectContext];
 }
 
 - (void)didReceiveMemoryWarning
@@ -122,6 +136,22 @@ typedef enum {
 }
 
 - (IBAction)clickRaiseQuestion:(id)sender {
+    
+    // question can not be empty
+    if ([self.questionFeild.textStorage.string isEqualToString:@""]) {
+        [self showAlert:@"问题内容不能为空"];
+        return;
+    }
+    
+    // must select grade and course
+    if ([[self.btCourse currentTitle] isEqualToString:@"科目"]) {
+        [self showAlert:@"请选择具体科目"];
+        return;
+    }
+    
+    // save question to core data
+    [self createQuestion];
+    
     UIAlertView *raiseQuestionAlter = [[UIAlertView alloc] initWithTitle:@"完成" message:@"您的问题已提交成功！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
     
     [raiseQuestionAlter show];
@@ -135,7 +165,8 @@ typedef enum {
 
 didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
-    self.btnImagePick.imageView.image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    attachedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    self.btnImagePick.imageView.image = attachedImage;
     
     [Picker dismissViewControllerAnimated:YES completion:nil];
     
@@ -149,6 +180,47 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
     }
     
     return YES;
+}
+
+- (void)showAlert:(NSString *)text
+{
+    UIAlertView *raiseQuestionAlter = [[UIAlertView alloc] initWithTitle:@"完成" message:text delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    
+    [raiseQuestionAlter show];
+}
+
+- (void)createQuestion
+{
+    Question *newQuestion = [NSEntityDescription
+                          insertNewObjectForEntityForName:@"Question"
+                          inManagedObjectContext:managedObjectContext];
+    
+    // init item
+    QuesItem *newItem = [NSEntityDescription
+                                      insertNewObjectForEntityForName:@"QuesItem"
+                                      inManagedObjectContext:managedObjectContext];
+    
+    newItem.text = self.questionFeild.textStorage.string;
+    newItem.type = [NSNumber numberWithInt:AMBubbleCellSent];
+    newItem.date = [NSDate date];
+    
+    if (attachedImage) {
+        newItem.attachment = [NSData dataWithData:UIImagePNGRepresentation(attachedImage)];
+    }
+    
+    // init question
+    [newQuestion addItemsObject:newItem];
+    
+    Course *toCourse = [[OADataEngine sharedInstance] getCourseByName:[self.btCourse currentTitle]];
+    [toCourse addQuestionsObject:newQuestion];
+    
+    // save data
+    NSError *savingError = nil;
+    if ([managedObjectContext save:&savingError]) {
+        NSLog(@"Successfully saved the context.");
+    } else {
+        NSLog(@"Failed to save the context. Error = %@", savingError);
+    }
 }
 
 @end

@@ -59,15 +59,23 @@ static OADataEngine *sharedEngine = nil;
     }
 }
 
-- (NSArray *)getQuestionsByCourse:(MyCourse)course
+- (Course *)getCourseByName:(NSString *)name
 {
     NSManagedObjectModel* model = [[self.managedObjectContext persistentStoreCoordinator] managedObjectModel];
     NSFetchRequest* request = [model fetchRequestFromTemplateWithName:@"FetchCourse"
-                                                substitutionVariables:@{@"COURSE" : [self getCourseName:course]}];
+                                                substitutionVariables:@{@"COURSE" : name}];
     NSError* error = nil;
     NSArray* results = [self.managedObjectContext executeFetchRequest:request error:&error];
     
     Course *currentCourse = [results objectAtIndex:0];
+    NSLog(@"course name: %@", currentCourse.name);
+    
+    return currentCourse;
+}
+
+- (NSArray *)getQuestionsByCourse:(MyCourse)course
+{
+    Course *currentCourse = [self getCourseByName:[self getCourseName:course]];
     NSLog(@"course name: %@", currentCourse.name);
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"items.@min.date" ascending:YES];
