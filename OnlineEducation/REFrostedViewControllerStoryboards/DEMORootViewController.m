@@ -21,8 +21,14 @@
 
 - (void)awakeFromNib
 {
-    // create dummy data
-//    [self initDummyData];
+    // create dummy data if database doesn't exist
+    DEMOAppDelegate * appDelegate = [[UIApplication sharedApplication] delegate];
+    NSURL *storeURL = [[appDelegate applicationDocumentsDirectory] URLByAppendingPathComponent:@"oaquestion.sqlite"];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]])
+    {
+        [self initDummyData];
+    }
     
 //    [self fetchTest];
     
